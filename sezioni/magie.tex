@@ -298,19 +298,39 @@ Sono: ``\emph{Attacco}'', ``\emph{Difesa}'', ``\emph{Materia}'', ``\emph{Mente}'
 
 Una stregoneria è divisa in due componenti principali:
 \begin{itemize}
-\item \emph{Grado} (a scelta del giocatore/personaggio): rapprenta lo sforzo del personaggio nel ricercare l'effetto desiderato. Determina quanto l'effetto della stregoneria sia imponente e conseguentemente la sua difficoltà.
+\item \emph{Grado} (a scelta del giocatore/personaggio): rapprenta lo sforzo del personaggio nel ricercare l'effetto desiderato. Determina quanto l'effetto della stregoneria sia imponente e conseguentemente la sua difficoltà. Escludendo gli effetti di alcuni talenti o oggetti, il grado varia da un minimo di 1 a un massimo di 10.
 \item \emph{Potenza} (stabilita dal lancio di un dado): rappresenta la casualità della natura e la non completa conoscenza della magia da parte del personaggio. Il valore di potenza può avere diversi effetti, potenziando l'effetto dato dal grado o aumentando la durata della stregoneria stessa.
 \end{itemize}
+Spesso nella gittata delle stregonerie è presente la dicitura ``\emph{abilità}'': si intende il valore dell'abilità che viene utilizzata per lanciare la stregoneria.\\
+\emph{Esempio: le stregonerie di distruzione hanno una gittata pari a ``10 metri * abilità'': avendo l'abilità ``Stregoneria di attacco'' al 5, si potranno lanciare stregonerie di distruzione fino a un massimo di 50 metri di distanza.}
 
 \clearpage
-\subsubsection{Lista delle stregonerie}
+\subsubsection{Stregoneria di attacco}
+Queste stregonerie vengono utilizzate usando l'abilità ``\textbf{Stregoneria di attacco}''.\\
+Il personaggio utilizza le sue arti magiche per infliggere danni in maniera diretta o indiretta. \\
+Questa divisione è caratterizzata dalle due specializzazioni: \emph{Distruzione} e \emph{Incantamento}.\\
+Nel primo caso egli è in grado di scatenare un qualsiasi elemento contro il suo bersaglio: potrebbe scagliare pietre aguzze mosse dalla forza della stregoneria, far emergere spine acuminate all'interno di un'armatura o persino far colpire una creatura dalla sua stessa ombra. Eventuali effetti di alterazione della materia si esauriranno immediatamente (l'armatura sopracitata tornerà alla forma originale), ma saranno sufficienti a danneggiare i bersagli del personaggio.\\
+Nel secondo caso egli infonde la sua arma con energia magica, incrementando la capacità di infliggere ferite alle vittime dei suoi attacchi.\\
+La potenza di queste stregonerie migliora le capacità di infliggere danni.\\
+
+\begin{tabularx}{\linewidth}{|c |X| X|}
+\hline
+\textbf{Risultato}&\textbf{Distruzione}&\textbf{Incantamento}\\ \hline
+1&Potenza = 1&Potenza = 1\\ \hline
+2&Potenza = 2&Potenza = 2\\ \hline
+3&Potenza = 3&Potenza = 3\\ \hline
+4&Potenza = 4&Potenza = 4\\ \hline
+5&Potenza = 5&Potenza = 5\\ \hline
+6&Potenza = 6; Il danno non viene ridotto dall'armatura. &Potenza = 6; Il danno del prossimo attacco non viene ridotto dall'armatura.\\ \hline
+\end{tabularx}
+
 
 \begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\multicolumn{5}{c}{Stregoneria di Attacco} \\
-\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Effetto}  &  \textbf{Descrizione}  \\    
+\multicolumn{5}{c}{\textbf{Stregoneria di Attacco}} \\
+\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
 \hline
-Distruzione    &   Istantaneo   &  D6   &  Danni al bersaglio: Grado + Potenza &  Il personaggio utilizza un'elemento presente nell'ambiente circostante per infliggere danni a un bersaglio.   \\ \hline
-Incantamento    &    Arma equipaggiata  &   D4  &    &    \\    
+Distruzione    &   Istantaneo   &  D4   & 10 metri * abilità  & Danni: Grado + Potenza \\ \hline
+Incantamento    & Prossimo attacco, massimo 5 round  &   D4  & Arma equipaggiata   & Aumento danni: Grado/2 + Potenza    \\    
 \hline
 \end{tabularx}
 
