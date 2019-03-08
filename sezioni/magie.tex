@@ -46,6 +46,10 @@ Sono presenti due eccezioni:
 \end{itemize}
 In entrambi i casi l'utilizzatore salterà il suo prossimo turno.
 
+\subsection{Durata della magia}
+La durata di una magia può essere istantanea o protrarsi nel tempo.
+Nel primo caso gli effetti terminano immediatamente dopo l'esecuzione della magia.
+Nel secondo caso restano attivi per la durata indicata. Il personaggio che ha lanciato la magia ha comunque la possibilità di terminarli anzitempo.
 
 
 \subsection{Danno della magia}
@@ -255,7 +259,7 @@ Le magie del Sesto cerchio sono estremamente potenti: stancano notevolmente chi 
 \hline
 \textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
 \textit{Armatura di nebbia} & 3 & 2 round & 5 metri &Un bersaglio viene protetto su tutto il corpo da un sottile strato di nebbia. Questo gli conferisce un modificatore di +1 alla difficoltà per essere colpito in corpo a corpo e un modificatore di +2 alla difficoltà per essere colpito con armi a distanza. \\ \hline
-\textit{Rituale} & 0 &Istantaneo  & Sè stesso  & Come prezzo per eseguire il rito, l'incantatore deve sacrificare una creatura animale o antropomorfa; l'ìincantatore recupera tanti punti vita o mana quanti sono i punti vita massimi del vivente sacrificato. Terminato il rito, il corpo della vittima avvizzisce molto velocemente e potrà essere usato per altri rituali. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
+\textit{Rituale} & 0 &Istantaneo  & Sè stesso  & Come prezzo per eseguire il rito, l'incantatore deve sacrificare una creatura animale o antropomorfa; l'ìincantatore recupera tanti punti vita o mana quanti sono i punti vita massimi del vivente sacrificato. Terminato il rito, il corpo della vittima avvizzisce molto velocemente e non potrà essere usato per lanciare altri incanti. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
 \textit{Spirito vendicativo} & 4 & 3 round & 1 metro & L'incantatore evoca uno “\emph{Spirito Vendicativo}” suo alleato che combatte per lui. È possibile scegliere se evocare la versione che utilizza armi a distanza o armi bianche. \\ \hline
 \textit{Storpia} & 5  & 2 round & 10 metri &L'incantatore danneggia le articolazioni delle gambe (o zampe) di un bersaglio, rallentandone notevolmente i movimenti. Il bersaglio non potrà correre inoltre ogni TDS per colpirlo con un'arma avrà un modificatore di -1 alla difficoltà. \\ \hline
 \textit{Maledizione} & 4 & 4 round & 15 metri & L'incantatore investe di energia magica un bersaglio, che dovrà fare un TDS su ``\emph{Resistere alla magia mentale}'' con difficoltà 4. In caso di fallimento, per la durata dell'incanto, le abilità   ``\emph{Resistere alla magia mentale}'' e  ``\emph{Resistere alla magia di distruzione}'' del bersagglio avranno valore dimezzato e non beneficieranno di modificatori dati da specializzazioni e talenti.\\
@@ -270,7 +274,7 @@ Le magie del Sesto cerchio sono estremamente potenti: stancano notevolmente chi 
 \textit{Infettare} & 5 & Istantaneo & Contatto &L'incantatore corrompe il sangue di un bersaglio, infettandolo. Se il bersaglio non viene curato nelle ore successive all'infezione, la malattia degenererà condannandolo a morte certa. \\ \hline
 \textit{Parlare con i morti} & 7 &Istantaneo  & Sè stesso  & Questa incanto permette all'incantatore di parlare con gli spiriti dei morti. In presenza del corpo di un soggetto (morto di recente) potrà vederne lo spirito e comunicare con lui. Lo spirito sarà in grado di rivelare informazioni relative agli istanti precedenti alla sua morte ma sarà permeato dalle emozioni provate in quei momenti. \\ \hline
 \textit{Visione terrificante} & 6 & 2 round & 10 metri &Questa incanto combina la necromanzia con le illusioni: l'incantatore fa vedere a un bersaglio le immagini relative a una sua grande paura, al fine di terrorizzarlo e renderlo inoffensivo. Il bersaglio, durante un combattimento, prima di eseguire ogni azione tira un D6. Con risultato pari o superiore a 5 salterà il proprio turno. \\ \hline
-\textit{Volto dell'amore} & 6  & 4 round & Contatto &Questa incanto combina la necromanzia con le illusioni: l'incantatore risveglia un cadavere, rendendolo privo di connotati; chiunque, guardandolo, lo vedrà come se si trattasse di una persona a lui cara.\\ \hline
+\textit{Volto dell'amore} & 6  & 4 round & Contatto &Questa incanto combina la necromanzia con le illusioni: l'incantatore risveglia un cadavere, rendendolo privo di connotati; chiunque, guardandolo, lo vedrà come se si trattasse di una persona a lui cara. Al termine della magia, il corpo utilizzato avvizzisce molto velocemente e non potrà essere usato per lanciare altri incanti.\\ \hline
 \textit{Teschio di morte} & 7 & Istantaneo & 20 metri & Uno spettrale teschio d’ombra erompe tra le mani dell'incantatore e si muove molto velocemente fino a 20 metri di distanza in linea retta dalla posizione di partenza (la direzione è scelta da chi lancia l’incanto). Ogni creatura (giocatore o mostro) che si trova sulla traiettoria del teschio subisce 2D6 danni, il danno è calcolato una sola volta e applicato a tutti i bersagli.
 I danni non possono essere ridotti dall'armatura e dalla resistenza magica.
  \\
@@ -292,6 +296,24 @@ I danni non possono essere ridotti dall'armatura e dalla resistenza magica.
  \\
 \hline
 \end{tabularx}
+
+
+\paragraph{Quinto cerchio}\mbox{}\\
+
+\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
+\hline
+\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
+\textit{Paranoia} & 9 & 3 round & 1 kilometro &Un'area enorme attorno all'incantatore precipita nel buio. Tutti coloro che si trovano nell'area vedono come se fosse notte (anche se dotati della capacità di vedere al buio); le evocazioni dell'incantatore hanno un modificatore di +2 al danno con ogni attacco.
+\\ \hline
+\textit{Scheletro di spine} & 9 &Istantaneo  & 20 metri  &La difficoltà di questo incanto aumenta a 12 se il bersaglio ha un valore di \emph{Costituzione} pari o superiore a 15. Le ossa del bersaglio si deformano, coprendosi di spine rivolte in ogni direzione. Infligge 3D6 di dann che non possono essere ridotti dall'armatura e dalla resistenza magica. Se il danno è fatale, le ossa si ``spogliano'' della carne, diventando uno \emph{scheletro} al servizio dell'utilizzatore dell’incanto. Lo scheletro così evocato conta come evocazione e resiste fino a quattro ore.\\ \hline
+\textit{Reliquia} & 0 & Istantaneo & Contatto &L'incantatore estrae il cuore dal corpo di una sua vittima (immediatamente dopo il decesso) e sigilla al suo interno l'anima. Il cuore diventa così una \emph{Reliquia}, un oggetto che può essere usato dal personaggio per compiere un rito. Il cuore continuerà a pulsare e non si decomporrà fintanto che il personaggio che ha eseguito questo incanto sarà vivo o la reliquia non sarà utilizzata. Al termine del rito, il corpo utilizzato avvizzisce molto velocemente e non potrà essere usato per lanciare altri incanti. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
+\textit{aaaaa} & 0  & Istantaneo & Sè stesso &aaaaa  \\ \hline
+\textit{aaaa} & 7 & Istantaneo & 20 metri & aaaa
+ \\
+\hline
+\end{tabularx}
+
+%stregonerie
 \clearpage
 \subsection{Le stregonerie}
 Come descritto precedentemente, le stregonerie offrono molte più possibilità al giocatore dal punto di vista della versatilità e permettono quindi maggiori spunti narrativi.
@@ -300,13 +322,16 @@ Sono: ``\emph{Attacco}'', ``\emph{Controllo}'', ``\emph{Materia}'', ``\emph{Ment
 
 Una stregoneria è divisa in due componenti principali:
 \begin{itemize}
-\item \emph{Grado} (a scelta del giocatore/personaggio): rapprenta lo sforzo del personaggio nel ricercare l'effetto desiderato. Determina quanto l'effetto della stregoneria sia imponente e conseguentemente la sua difficoltà. Escludendo gli effetti di alcuni talenti o oggetti, il grado varia da un minimo di 1 a un massimo di 10.
+\item \emph{Grado} (a scelta del giocatore/personaggio): rapprenta lo sforzo del personaggio nel ricercare l'effetto desiderato. Determina quanto l'effetto della stregoneria sia imponente e conseguentemente la sua difficoltà. Escludendo gli effetti di alcuni talenti o oggetti, il grado varia da un minimo di 1 a un massimo di 10. La base di partenza per stabilire il grado di una stregoneria è quanto l’evento sia assurdo o quanto gravi possano essere i suoi effetti. Esempio: utilizzare una stregoneria di alterazione per ravvivare la fiamma di un falò è molto semplice; per questo motivo la stregoneria potrebbe essere di grado 1. Manipolare le fiamme di un falò per scatenare un tornado di fuoco, è chiaramente una cosa più complessa e ha una difficoltà di molto superiore.
 \item \emph{Potenza} (stabilita dal lancio di un dado): rappresenta la casualità della natura e la non completa conoscenza della magia da parte del personaggio. Il valore di potenza può avere diversi effetti, potenziando l'effetto dato dal grado o aumentando la durata della stregoneria stessa.
 \end{itemize}
 In caso di fallimenti, ogni effetti della stregoneria non avrà luogo, compresi quelli dati dalla potenza.\\
 Spesso nella gittata delle stregonerie è presente la dicitura ``\emph{abilità}'': si intende il valore dell'abilità che viene utilizzata per lanciare la stregoneria.\\
-\emph{Esempio: le stregonerie di distruzione hanno una gittata pari a ``10 metri * abilità'': avendo l'abilità ``Stregoneria di attacco'' al 5, si potranno lanciare stregonerie di distruzione fino a un massimo di 50 metri di distanza.}
-
+\emph{Esempio: le stregonerie di distruzione hanno una gittata pari a ``10 metri * abilità'': avendo l'abilità ``Stregoneria di attacco'' al 5, si potranno lanciare stregonerie di distruzione fino a un massimo di 50 metri di distanza.}\\
+Alcuni tipi di stregoneria richiedono la presenza di un elemento vicino al personaggio per poter essere utilizzate. Per utilizzare un dardo di fuoco tramite la Stregoneria di Distruzione, è necessario avere una fonte di fuoco (come una torcia o un falò) a disposizione.
+\subsubsection{Affinità con un elemento}
+Alcuni personaggio potrebbero avere da background un particolare legame con un elemento. Il master potrebbe quindi concedere l'\emph{affinità} a quel particolare elemento per quel personaggio, permettendogli di ignorare il requisito dell'elemento di partenza usando stregonerie basate su quell'elemento.\\
+Esempio: Un personaggio ha da sempre sviluppato un particolare legame con l'elemento \emph{Acqua}, cercando sempre di dare la priorità a quel particolare elemento rispetto agli altri. Il master gli concede l'\emph{affinità con l'acqua}, in modo che in qualsiasi condizione quel personaggio possa utilizzare stregonerie basate sull'acqua, anche se non è presente una fonte nei dintorni.
 %stregoneria di attacco
 \clearpage
 \subsubsection{Stregoneria di Attacco}
