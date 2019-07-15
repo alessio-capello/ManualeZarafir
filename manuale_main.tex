@@ -89,6 +89,7 @@
 \newcolumntype{b}{>{\hsize=1.6\hsize}X}
 \newcolumntype{s}{>{\hsize=0.45\hsize}X}
 \newcolumntype{m}{>{\hsize=0.95\hsize}X}
+\newcolumntype{k}{>{\hsize=2.05\hsize}X}
 
 %tabella magie
 \newcolumntype{N}{>{\hsize=0.85\hsize}X}
@@ -97,19 +98,23 @@
 \newcolumntype{G}{>{\centering\hsize=0.75\hsize}X}
 \newcolumntype{Y}{>{\hsize=1.8\hsize}X}
 
-%background    
+%BACKGROUD - DA RIMUOVERE PER VERSIONE STAMPA  
 %                       https://tex.stackexchange.com/questions/167719/how-to-use-background-image-in-latex
-\usepackage[pages=all]{background}
+	\usepackage[pages=some]{background}
 
-\backgroundsetup{
-scale=1,
-color=black,
-opacity=0.4,
-angle=0,
-contents={% 
- \includegraphics[width=\paperwidth,height=\paperheight]{../background-image-bw}  }
- %
-}
+
+	\backgroundsetup{
+	scale=1,
+	color=black,
+	opacity=0.4,
+	angle=0,
+	contents={%
+	  \includegraphics[width=\paperwidth,height=\paperheight]{../background-image-bw}
+	  }%
+	}
+
+%----------------------fine sezione backgroud
+
 
 %hypenation
 %\hyphenpenalty 10000
@@ -144,10 +149,14 @@ contents={%
 \subfile{sezioni/creazione_pg}
 \clearpage
 
-\section{Punti Vita, Mana e Influenza}
+\section{Punti Vita, Mana}
 \subfile{sezioni/vita_mana}
 \clearpage
 
+
+\section{Conoscenze}
+\subfile{sezioni/conoscenze}
+\clearpage 
 
 \section{Il Tiro di Simulazione}
 \subfile{sezioni/tds}

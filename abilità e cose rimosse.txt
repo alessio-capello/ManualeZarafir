@@ -1,0 +1,138 @@
+- Riflessi e iniziativa, segnare che è possibile usare un'abilità a parte per migliroare il proprio punteggio, altrimenti deciso dal master
+
+------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{m|s|b}
+\hline
+           \textbf{Riparare Equipaggiamento}      &     \textit{\textbf{Forza}}      &        Questa abilità permette al personaggio di riparare gli oggetti usati come equipaggiamento, come armi scudi e armature.   \\
+\hline
+\multicolumn{3}{c}{\textbf{Specializzazioni}}           \\
+\hline
+\multirow{2}{*}{\textit{Riparare Scudi}} &1 &   Il personaggio ha un bonus di -1 alla difficoltà per riparare gli scudi.   \\
+                  & 2&          Il personaggio ha un bonus di -1 alla difficoltà per riparare gli scudi. \\\hline
+\multirow{2}{*}{\textit{Riparare Armature}} &  1  &    Il personaggio ha un bonus di -1 alla difficoltà per riparare le armature.  \\
+                  &  2    &      Il personaggio ha un bonus di -1 alla difficoltà per riparare le armature.\\ \hline
+\multirow{2}{*}{\textit{Riparare Armi}} &  1  &   Il personaggio ha un bonus di -1 alla difficoltà per riparare le armi.   \\
+                  &  2    &      Il personaggio ha un bonus di -1 alla difficoltà per riparare le armi. \\ 
+\hline
+\multicolumn{3}{c}{\textbf{Talenti}}           \\
+\hline
+      \multicolumn{2}{l}{  \textit{Tempra}  } & Gli oggetti riparati o migliorati dal personaggio sono particolarmente resistenti all’usura. \\\hline
+          \multicolumn{2}{l}{  \textit{Cannone di Vetro}   } & Il personaggio può usare le sue conoscenze per migliorare le caratteristiche di un oggetto, ma questo risulterà estremamente fragile e se danneggiato non può essere nuovamente riparato. La fragilità verrà stabilita dal master. L’aumento di efficacia dipende dalla difficoltà (scelta dal giocatore).  \\\hline
+         \multicolumn{2}{l}{   \textit{Maldestro}      } & Fallire un tiro su ``\emph{Riparare Equipaggiamento}'' causa con minor probabilità la distruzione dell'oggetto. \\\hline
+         \multicolumn{2}{l}{   \textit{Riciclare}     }& Il personaggio può ricavare un piccolo ammontare di risorse anche da oggetti rotti.\\\hline
+
+\end{tabularx}
+
+
+---------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{m|s|b}
+\hline
+           \textbf{Cultura generale}      &     \textit{\textbf{Intelligenza}}      &     Indica la e la capacità di conoscere e riconoscere culture, lingue, religioni. Azioni come il provare a riconoscere un vessillo, un particolare tipo di architettura, oggettistica o effigie religiosa dipendono da questa abilità.  \\
+\hline
+\multicolumn{3}{c}{\textbf{Specializzazioni}}           \\
+\hline
+\multirow{2}{*}{\textit{Conoscenze geografiche}} &1 &    Il personaggio ha una discreta conoscenza degli elementi naturali. Per questo motivo può riconoscere con maggior facilità punti di interesse come fiumi o montagne. Per queste azioni ha un modificatore di -1 alla difficoltà.  \\
+                  & 2&          a   \\\hline
+\multirow{2}{*}{\textit{Conoscenze linguistiche}} &1 &    Il personaggio ha una discreta familiarità con lo studio delle diverse lingue. Per lui impararne una nuova è più semplice.  \\
+                  & 2&          a   \\\hline
+\multirow{2}{*}{\textit{Conoscenze culturali}} &  1  &  Il personaggio ha una discreta conoscenza delle differenti culture della zona. Per questo motivo può riconoscere con maggior facilità l'appartenenza di un particolare oggetto (come un vessillo o un'arma) coerente con la zona di appartenenza del personaggio. Per queste azioni ha un modificatore di -1 alla difficoltà.  \\
+                  &  2    &        a \\ \hline
+\multirow{2}{*}{\textit{Conoscenze religiose}} &  1  &    Il personaggio ha una discreta conoscenza delle differenti religioni della zona. Per questo motivo può riconoscere con maggior facilità un particolare rito o oggetto religioso coerente con la zona di appartenenza del personaggio. Per queste azioni ha un modificatore di -1 alla difficoltà.     \\
+                  &  2    &        spec32   \\ 
+
+
+-----------------------------------------------------------------------
+
+ \textbf{Forza di volontà}      &     \textit{\textbf{Sensibilità}}      &      Questa abilità permette al personaggio di mantenere la calma e il controllo sulle sue azioni in condizioni di paura e terrore o altri stati d'animo che potrebbero impedirgli di ragionare e agire lucidamente. Può anche essere usata per motivare\\
+
+------------------------------------------------------------
+
+  \textbf{Leadership}      &     \textit{\textbf{Carisma}}      &   Questa abilità determina chi all’interno di un gruppo sia più influente nel proporre le proprie idee o decisioni.   \\
+\hline
+\multicolumn{3}{c}{\textbf{Specializzazioni}}           \\
+\hline
+\multirow{2}{*}{\textit{Influenza superiore}} &1 &   Il personaggio risulta particolarmente carismatico: il valore di influenza è aumentato di 1.   \\
+                  & 2&      Il personaggio è rispettato e considerato all’interno del proprio gruppo in modo molto superiore alla media. Il valore di influenza è aumentato di 2.  \\\hline
+\multirow{2}{*}{\textit{Comandante}} &  1  & Il personaggio non si tira indietro quando si tratta di motivare i propri compagni. Utilizzare la propria leadership per motivare i propri compagni ha un modificatore di -2 alla difficoltà.  \\
+                  &  2    &      Il personaggio è considerato come un riferimento nei momenti di difficoltà. Utilizzare la propria leadership per motivare i propri compagni ha un modificatore di -2 alla difficoltà.\\ 
+                  \hline
+\multicolumn{3}{c}{\textbf{Talenti}}           \\
+\hline
+      \multicolumn{2}{l}{  \textit{Presenza ispiratrice}  } &Il personaggio riesce a trasmettere parte delle sue conoscenze agli altri membri del suo gruppo. I personaggi del suo gruppo hanno un modificatore di -2 alla difficoltà nei TDS relativi alle abilità in comune con il personaggio che possiede questo talento. Gli effetti multipli di questo talento non sono cumulabili. \\\hline
+          \multicolumn{2}{l}{  \textit{Sedare gli animi}   } & Il personaggio può utilizzare la propria abilità “Leadership” per provare a evitare ribellioni, sedare il malcontento o fermare una rissa.   \\\hline
+         \multicolumn{2}{l}{   \textit{Dare conforto}      } & Se il personaggio utilizza la propria leadership per far ritornare in sé un personaggio terrorizzato/spaventato/ecc ha un modificatore di -3 alla difficoltà. \\\hline
+         \multicolumn{2}{l}{   \textit{Chiamata alle armi}     }& Il personaggio infonde la sua foga negli alleati, conferendo a loro e a sé stesso un bonus di +3 a “Cavalcare” e “Marciare” durante una carica\\\hline
+
+\end{tabularx}
+
+
+---------------------------------------------------------------------------
+
+
+
+\begin{tabularx}{\linewidth}{m|s|b}
+\hline
+           \textbf{Riparare meccanismi}      &     \textit{\textbf{Intelligenza}}      &       Questa abilità permette al personaggio di riparare trappole danneggiate, congegni di varia natura (come le serrature) o piccoli oggetti come i monili.    \\
+\hline
+\multicolumn{3}{c}{\textbf{Specializzazioni}}           \\
+\hline
+\multirow{2}{*}{\textit{Riparare Trappole}} &1 &    Il personaggio ha un bonus di -1 alla difficoltà per riparare trappole.    \\
+                  & 2&           Il personaggio ha un bonus di -1 alla difficoltà per riparare trappole. \\\hline
+\multirow{2}{*}{\textit{Riparare Congegni}} &  1  &   Il personaggio ha un bonus di -1 alla difficoltà per riparare congegni.   \\
+                  &  2    &        Il personaggio ha un bonus di -1 alla difficoltà per riparare congegni. \\ \hline
+\multirow{2}{*}{\textit{Riparare Monili}} &  1  &   Il personaggio ha un bonus di -1 alla difficoltà per riparare monili.     \\
+                  &  2    &       Il personaggio ha un bonus di -1 alla difficoltà per riparare monili.  \\ 
+\hline
+
+\end{tabularx}
+
+
+
+-----------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{m|s|b}
+\hline
+           \textbf{Costruire / Posizionare trappole}      &     \textit{\textbf{Intelligenza}}      &       \\
+\hline
+\multicolumn{3}{c}{\textbf{Specializzazioni}}           \\
+\hline
+\multirow{2}{*}{\textit{Trappole Offensive}} &1 &    Le trappole offensive costruite dal personaggio hanno un modificatore di +1 al danno.  \\
+                  & 2&          Il personaggio ha un modificatore di -1 alla difficoltà per costruire e posizionare trappole offensive.   \\\hline
+\multirow{2}{*}{\textit{Trappole Bloccanti}} &  1  &  Le trappole bloccanti costruite dal personaggio hanno un modificatore di +1 alla difficoltà per liberarsi.  \\
+                  &  2    &       Il personaggio ha un modificatore di -1 alla difficoltà per costruire e posizionare trappole bloccanti. \\ \hline
+
+\multicolumn{3}{c}{\textbf{Talenti}}           \\
+\hline
+      \multicolumn{2}{l}{  \textit{Maestro delle trappole}  } &  Il livello massimo delle trappole che possono essere costruite dal personaggio è aumentato a 12. \\\hline
+          \multicolumn{2}{l}{  \textit{Posizionamento rapido}   } & Il personaggio impiega meno tempo a costruire e posizionare una trappola.  \\\hline
+         \multicolumn{2}{l}{   \textit{Posizionamento strategico}      } & Il personaggio posiziona le trappole in modo tattico per renderne più difficoltosa l’individuazione. Per questo motivo le trappole posizionate dal personaggio hanno una difficoltà minima per essere individuate pari a 2 (che potrà essere migliorata con “Occultare Trappole”). \\\hline
+         \multicolumn{2}{l}{   \textit{Meccanismi complicati}     }& Le trappole costruite dal personaggio possono essere disattivate con difficoltà pari a: Livello trappola + 2. \\\hline
+
+\end{tabularx}
+
+
+
+\begin{tabularx}{\linewidth}{m|s|b}
+\hline
+           \textbf{Occultare Trappole}      &     \textit{\textbf{Sensibilità}}      &          \\
+\hline
+\multicolumn{3}{c}{\textbf{Specializzazioni}}           \\
+\hline
+\multirow{2}{*}{\textit{Occultamento Migliorato}} &1 &    Le trappole nascoste dal personaggio hanno un modificatore di +1 alla difficoltà per essere individuate.    \\
+                  & 2& Le trappole nascoste dal personaggio hanno un modificatore di +1 alla difficoltà per essere individuate. \\\hline
+\multirow{2}{*}{\textit{Occultamento Facilitato}} &  1  &  Il personaggio ha un modificatore di -1 alla difficoltà per nascondere una trappola.   \\
+                  &  2    &        Il personaggio ha un modificatore di -1 alla difficoltà per nascondere una trappola. \\ \hline
+
+\hline
+\multicolumn{3}{c}{\textbf{Talenti}}           \\
+\hline
+      \multicolumn{2}{l}{  \textit{Improvvisare}  } & Il personaggio trova più facilmente materiali adatti a nascondere una trappola.\\\hline
+          \multicolumn{2}{l}{  \textit{Maldestro}   } & Fallire un tiro su “Occultare trappole” non causerà mai l’innesco della trappola stessa.   \\\hline
+         \multicolumn{2}{l}{   \textit{Camuffamento}      } &Le trappole nascoste dal personaggio hanno un +2 di difficoltà per essere individuate. \\\hline
+         \multicolumn{2}{l}{   \textit{Trucchi del Mestriere}     }&Il personaggio ha un modificatore di +1 alla difficoltà per occultare le trappole, ma queste non verranno innescate da personaggi hanno assistito all’occultamento.\\\hline
+\end{tabularx}
+
+
+
