@@ -2,11 +2,8 @@
 
 erbe generiche
 
-abilità (talenti e spec)
-resistere alla magia
 combattimento con due armi
 diversa velocità di attacco delle armi
-regole opzionali per abilità e magie
 punti exp
 gestione del turno
 
