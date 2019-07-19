@@ -135,4 +135,23 @@
 \end{tabularx}
 
 
+---------------------------------------------------------------------------------
+
+
+
+
+\subsection{Terminologia}
+Nel manuale viene fatto uso di alcuni termini specifici o abbreviazioni:
+\begin{itemize}
+\item \textbf{1D6} : Dado a 6 facce. Conseguentemente 3D6 vengono indicano “Tre dadi a 6 facce”.
+\item \textbf{TDS} : Tiro di Simulazione. Il funzionamento è spiegato nel capitolo apposito del manuale.
+\item \textbf{Turni e Round}: Turni e Round: le indicazioni temporali all'interno sono indicate come turni e round. 
+Un turno è il momento di gioco di ogni giocatore (master compreso). 
+Il round è l’insieme dei momenti di gioco di tutti i giocatori considerati una singola volta. 
+Si considera concluso il round quando ogni giocatore (master compreso) ha effettuato il proprio turno. Un turno può essere in combattimento o di non combattimento. 
+- Un turno, specialmente  in combattimento, dura circa una manciata di secondi, la durata del round dipende dal numero di soggetti coinvolti. Le azioni svolte nei propri turni all'interno di un singolo round sono in contemporanea o quasi con gli altri giocatori, salvo diversa indicazione del Master. 
+- Nei turni di non combattimento, il master potrebbe decidere di dilatare la loro durata, aumentando quindi l'arco di tempo effettivo di tutte le modifiche espresse in numero di turni o round. 
+In combattimento, durante il proprio turno, un giocatore potrà svolgere fino due azioni per volta. Un'azione d'attacco a scelta tra lanciare una magia o una mossa da combattimento e un’altra azione generica a scelta che non ricada nella prima categoria. 
+Il master stabilirà la possibilità di eseguire tali azioni caso per caso, la riuscita di esse potrà essere arbitraria o tramite lancio dei dadi, a sua discrezione.
+\end{itemize}
 
