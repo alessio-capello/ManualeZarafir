@@ -420,20 +420,20 @@ Queste stregonerie vengono utilizzate con l'abilità ``\textbf{Stregoneria di co
 Il personaggio utilizza le sue arti magiche per ostacolare i movimenti di un bersaglio o per \emph{annullare} il lancio di una magia. \\
 Questa divisione porta alle due specializzazioni: \emph{Blocco} e \emph{Annullamento}.\\
 \begin{itemize}
-\item Nel primo caso egli è in utilizza un qualsiasi elemento contro il suo bersaglio per rallentarne i movimenti, potendo addirittura bloccarlo del tutto. Questo potrebbe avvenire facendo emergere dal terreno radici, bloccandolo nel fango o con la forza del vento. Eventuali effetti di alterazione della materia si esauriscono al termine della stregoneria. Questo effetto dà un modificatore alla difficoltà per ogni azione compiuta dal bersaglio. Un personaggio bloccato in questo modo può provare a liberarsi all'inizio del proprio turno con un TDS su ``Forza'' con difficoltà pari alla metà del Grado della stregoneria arrotondato per difetto. Se il TSD ha successo, la stregoneria termina e il personaggio può agire liberamente.
-\item Nel secondo caso egli utilizza la propria energia per negare il lancio di una magia lanciata entro la gittata.Il grado della stregoneria di annullamento è grado pari a ``\emph{Difficoltà di lancio della magia da annullare +2}''. Se riesce a lanciarla con successo, la magia verrà annullata ed eventuali effetti addizionali verranno determinati dalla potenza.
+\item Nel primo caso egli è in utilizza un qualsiasi elemento contro il suo bersaglio per rallentarne i movimenti, potendo addirittura bloccarlo del tutto. Questo potrebbe avvenire facendo emergere dal terreno radici, bloccandolo nel fango o con la forza del vento. Eventuali effetti di alterazione della materia si esauriscono al termine della stregoneria. Il grado minimo per avere effetto è pari al valore di \emph{evasione} del bersaglio. La differenza tra il grado minimo e quello a cui si sceglie di lanciare la stregoneria, viene sommata al dado potenza per determinarne gli effetti (il massimo è comunque fissato a 6). Per il bersaglio è possibile resistere a questa magia.
+\item Nel secondo caso egli utilizza la propria energia per negare il lancio di una magia lanciata entro la gittata. Il grado minimo della stregoneria di annullamento è grado pari a ``\emph{Difficoltà di lancio della magia da annullare}''. Se riesce a lanciarla con successo, la magia verrà annullata ed eventuali effetti addizionali verranno determinati dalla potenza. La differenza tra il grado minimo e quello a cui si sceglie di lanciare la stregoneria, viene sommata al dado potenza per determinarne gli effetti (il massimo è comunque fissato a 6).
 \end{itemize}
-La potenza di queste stregonerie determina quanto i movimenti siamo impossibilitati o effetti bonus conseguenti al lancio della magia annullata. A seguito la tabella con i possibili risultati del dado potenza.\\
+La potenza di queste stregonerie determina quanto i movimenti siamo impossibilitati o effetti addizionati conseguenti all'annullamento della magia. \\
 
 \begin{tabularx}{\linewidth}{|c |X| X|}
 \hline
 \textbf{Risultato}&\textbf{Blocco}&\textbf{Antimagia}\\ \hline
-1&Potenza = 1&Chi ha lanciato la magia (che è stata annullata) spende 1 punto mana addizionale.\\ \hline
-2&Potenza = 2&Chi ha lanciato la magia (che è stata annullata) spende 1 punto mana addizionale.\\ \hline
-3&Potenza = 3&Chi ha lanciato la magia (che è stata annullata) spende 1 punto mana addizionale.\\ \hline
-4&Potenza = 4&Chi ha lanciato la magia (che è stata annullata) spende 2 punti mana addizionali.\\ \hline
-5&Potenza = 5&Chi ha lanciato la magia (che è stata annullata) spende 2 punti mana addizionali.\\ \hline
-6&Potenza = 6; Il bersaglio è impossibilitato a compiere ogni azione finché non si libera. &Chi ha lanciato la magia (che è stata annullata) non potrà utilizzare la stessa magia per i prossimi 2 round.\\ \hline
+1& Il bersaglio ha un modificatore di +1 alla difficoltà per ogni azione. Durata 1 round. &Chi ha lanciato la magia (se è stata annullata) spende 1 punto mana addizionale.\\ \hline
+2& Il bersaglio ha un modificatore di +2 alla difficoltà per ogni azione. Durata 1 round. &Chi ha lanciato la magia (se è stata annullata) spende 1 punto mana addizionale.\\ \hline
+3&Il bersaglio ha un modificatore di +3 alla difficoltà per ogni azione. Durata 2 round.&Chi ha lanciato la magia (se è stata annullata) spende 1 punto mana addizionale.\\ \hline
+4&Il bersaglio ha un modificatore di +4 alla difficoltà per ogni azione. Durata 2 round.&Chi ha lanciato la magia (se è stata annullata) spende 2 punti mana addizionali.\\ \hline
+5&Il bersaglio è impossibilitato a compiere ogni azione. Durata 1 round.&Chi ha lanciato la magia (se è stata annullata) spende 2 punti mana addizionali.\\ \hline
+6&Il bersaglio è impossibilitato a compiere ogni azione. Durata 2 round. &Chi ha lanciato la magia (se è stata annullata) non potrà utilizzare la stessa magia per i prossimi 2 round.\\ \hline
 \end{tabularx}
 
 
@@ -443,8 +443,8 @@ La potenza di queste stregonerie determina quanto i movimenti siamo impossibilit
 \hline
 \textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
 \hline
-Blocco    &   ``Grado/2'' round  (arrotondato per eccesso) &  D4   & 3 metri * abilità  & Modificatore difficoltà: Potenza \\ \hline
-Annullamento    &Istantaneo  &   D4  & 10 metri* abilità   & Annulla magia con difficoltà di lancio: Grado-2    \\    
+Blocco    &   Dipende dalla potenza &  D4   & 3 metri * abilità  & Effetto in base alla potenza. \\ \hline
+Annullamento    &Istantaneo  &   D4  & 10 metri * abilità   & Annulla magia con difficoltà di lancio: Grado   \\    
 \hline
 \end{tabularx}
 
