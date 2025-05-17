@@ -1,0 +1,260 @@
+\documentclass[../manuale_main.tex]{subfiles}
+
+
+
+\begin{document}
+\renewcommand\charname{Name}
+\renewcommand\charlevel{Level 0 Nothing}
+\renewcommand\charalignment{TN}
+\renewcommand\charplayername{Nemo}
+
+\addtocounter{charhpcount}{6}
+\charstr{12}
+\chardex{12}
+\charcon{12}
+\charint{12}
+\charwis{12}
+\charcha{12}
+
+\isclassskill{characrobaticsclassskillcount}
+
+% Class skill
+\addtocounter{characrobaticsmiscmodcount}{3}
+
+% ranks
+\addtocounter{characrobaticsrankscount}{1}
+
+% items
+%% This is not the ideal way, but I can't figure how to do it right atm.
+\renewcommand\printgearitems{\lfont item& \lfont wt.\tabularnewline\hline
+  \gearitem{thing}{2}
+\gearitem{thing2}{4}
+\gearitem{thing3}{24}
+\gearitem{thing2}{43}
+\subgearitem{part of thing2}{43}
+\totalitem}
+
+%% Same problem as gear, this is not an ideal solution
+\renewcommand\printacitems{\uppercase{AC Items} & \lfont bonus & \lfont type & \lfont check penalty & \lfont spell failure & \lfont weight & \lfont properties \tabularnewline\hline
+  \acitem{Padded}{2}{light}{0}{5}{10}{}
+  \acitem{Padded}{2}{light}{0}{5}{10}{}
+}
+\unitlength\textwidth
+\divide\unitlength 420
+
+\noindent\begin{picture}(420,594)
+
+  % \put(0,0){\framebox(420,594)}
+
+  \put(130,530){\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}[b]{D{46} D{23}  D{23}  D{23}  D{23}  D{23}  D{23}  D{23} }
+      \multicolumn{3}{D{69}}{\charname} & \charalignment & \multicolumn{4}{D{92}}{\charplayername} \\\cmidrule(rl){1-3}\cmidrule(rl){4-4}\cmidrule(rl){5-8}
+      \multicolumn{4}{D{92}}{\charlevel} &\multicolumn{2}{D{46}}{\chardiety} & \multicolumn{2}{D{46}}{\charhomeland} \\\cmidrule(rl){1-4}\cmidrule(rl){5-6}\cmidrule(rl){7-8}
+      \charrace & \charsize & \chargender & \charage & \charheight & \charweight & \charhair & \chareyes \\\cmidrule(rl){1-1}\cmidrule(rl){2-2}\cmidrule(rl){3-3}\cmidrule(rl){4-4}\cmidrule(rl){5-5}\cmidrule(rl){6-6}\cmidrule(rl){7-7}\cmidrule(rl){8-8}
+    \end{tabular}}
+  \put(130,529){\renewcommand{\arraystretch}{1.9}
+    \begin{tabular}[b]{D{46} D{23}  D{23}  D{23}  D{23}  D{23}  D{23}  D{23} }
+      \multicolumn{3}{D{69}}{\lfont character name} & \lfont alignment & \multicolumn{4}{D{92}}{\lfont player name} \\
+      \multicolumn{4}{D{92}}{\lfont character level} &\multicolumn{2}{D{46}}{\lfont deity} & \multicolumn{2}{D{46}}{\lfont homeland} \\
+      \lfont race & \lfont size & \lfont gender & \lfont age & \lfont height & \lfont weight & \lfont hair & \lfont eyes \\
+    \end{tabular}}
+
+  %% Labels
+  \put(0,512){\makebox(28,3){\tiny\scshape attribute}}
+  \stretchlabels{33}{512}{102}{ability score,  ability modifier, Temp Adjustment, Temp Modifier}
+  %% STR
+  \titlebox{0}{500}{28}{STR}{strength}
+\stretchattributes{33}{500}{102}{\arabic{charstrcount},\plusminus{charstrmodcount},\plusminus{charstrtmpadjcount},\plusminus{charstrtmpmodcount}}
+
+  %% DEX
+  \titlebox{0}{488}{28}{DEX}{dexterity}
+  \stretchattributes{33}{488}{102}{\arabic{chardexcount},\plusminus{chardexmodcount},\plusminus{chardextmpadjcount},\plusminus{chardextmpmodcount}}
+  
+  %% CON
+  \titlebox{0}{476}{28}{CON}{constitution}
+  \stretchattributes{33}{476}{102}{\arabic{charconcount},\plusminus{charconmodcount},\plusminus{charcontmpadjcount},\plusminus{charcontmpmodcount}}
+  
+  %% INT
+  \titlebox{0}{464}{28}{INT}{intelligence}
+  \stretchattributes{33}{464}{102}{\arabic{charintcount},\plusminus{charintmodcount},\plusminus{charinttmpadjcount},\plusminus{charinttmpmodcount}}
+
+  %% WIS
+  \titlebox{0}{452}{28}{WIS}{wisdom}
+  \stretchattributes{33}{452}{102}{\arabic{charwiscount},\plusminus{charwismodcount},\plusminus{charwistmpadjcount},\plusminus{charwistmpmodcount}}
+
+  %% CHA
+  \titlebox{0}{440}{28}{CHA}{charisma}
+  \stretchattributes{33}{440}{102}{\arabic{charchacount},\plusminus{charchamodcount},\plusminus{charchatmpadjcount},\plusminus{charchatmpmodcount}}
+
+
+  %% HP
+  \singletitlebox{107}{505}{26}{12}{HP}
+  % \put(107,505){\framebox(26,12){}}
+  % \put(107,508){\makebox(26,9){HP}}
+  % \put(107,506){\makebox(26,3){\tiny\scshape hit points}}
+  \put(137,505){\framebox(38,12){}}
+  \put(137,512){\makebox(14,4){\tiny\scshape Total}}
+  \put(137,505){\parbox[b][12\unitlength][c]{36\unitlength}{\raggedleft \arabic{charhpcount}}}
+  \put(177,505){\framebox(28,12){}}
+  \put(177,512){\makebox(8,4){\tiny\scshape DR}}
+
+  %% little boxes
+  \put(107,500){\makebox(36,4){\tiny\scshape wounds/current hp}}
+  \put(107,480){\framebox(98,20){}}
+  \put(109,480){\parbox[b][18\unitlength][t]{82\unitlength}{\tiny blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah }}
+  \put(107,475){\makebox(36,4){\tiny\scshape nonleathal damage}}
+  \put(107,455){\framebox(98,20){}}
+  
+  %% INIT
+  \titlebox{107}{440}{43}{INITIATIVE}{modifier}
+  \stretchequalattributes{152}{440}{206}{\arabic{chardexmodcount},0}
+  \stretchlabels{152}{434}{206}{TOTAL, dex modifier, misc modifier}
+  
+  %% AC
+  \titlebox{0}{420}{27}{AC}{armour class}
+ % \attributes{34}{420}{0}
+ % \put(50,420){\makebox(3,10){\tiny =}}
+%  \put(53,420){\makebox(13,10){10}}
+%  \plusattributes{65}{420}{0,0,0,0,0,0,0}{20}
+  \equalattributes{25}{420}{10,0,0,\arabic{chardexmodcount},0,0,0,0}{20}
+  \scaleattributelabels{25}{410}{TOTAL,default, armor bonus,shield bonus,dex \mbox{modifier},size \mbox{modifier},natural armour,\mbox{deflection} \mbox{modifier},misc \mbox{modifier}}{20}
+
+  %% Touch, Flat footed
+  \titlebox{0}{400}{35}{TOUCH}{armour class}
+  \attributes{40}{400}{0}
+  \titlebox{60}{400}{55}{FLAT-FOOTED}{armour class}
+  \attributes{120}{400}{0} 
+  \put(140,400){\framebox(65,9){}}
+  \put(140,400){\parbox[b][8\unitlength][t]{65\unitlength}{\raggedleft \lfont modifiers}}
+
+  %% fort, reflex and will
+  \stretchlabels{60}{392}{205}{TOTAL, base save, ability modifier, magic modifier, misc modifier, temporary modifier}
+  \titlebox{0}{380}{53}{fortitude}{(constitution)}
+  \stretchequalattributes{60}{380}{205}{0,\arabic{charconmodcount},0,0,0}
+  \titlebox{0}{365}{53}{reflex}{(dexterity)}
+  \stretchequalattributes{60}{365}{205}{0,\arabic{chardexmodcount},0,0,0}
+  \titlebox{0}{350}{53}{will}{(wisdom)}  
+  \stretchequalattributes{60}{350}{205}{0,\arabic{charwismodcount},0,0,0}
+
+  %%Base attack bonus, spell resistance
+  \singletitlebox{0}{329}{90}{11}{base attack bonus}
+  \attributes{94}{330}{0}
+  \singletitlebox{113}{329}{74}{11}{spell resistance}
+  \attributes{190}{330}{0}
+  
+
+  \singletitlebox{0}{309}{21}{11}{cmb}
+  \stretchequalattributes{25}{310}{130}{0,\arabic{charstrmodcount},0}
+  \stretchlabels{25}{304}{130}{TOTAL, \mbox{base attack} bonus,strength modifier, size modifier}
+  \singletitlebox{0}{289}{21}{11}{cmd}
+  \stretchequalattributes{25}{290}{130}{0,\arabic{charstrmodcount},\arabic{chardexmodcount},0,10}
+  \stretchlabels{25}{284}{130}{TOTAL, \mbox{base attack} bonus,strength modifier,dexterity modifier, size modifier,default}
+
+  \singletitlebox{135}{284}{25}{35}{speed}
+  % \put(135,284){\framebox(25,35){\uppercase{Speed}}}
+  \put(165,310){\framebox(40,\boxheight){}}
+  \put(165,311){\begin{tabular}[b]{F{17}E{2}F{16}E{2}}0 &ft. & 0& sq.\end{tabular}}
+  \put(165,307){\parbox[b][3\unitlength][b]{40\unitlength}{\centering\lfont base speed}}
+  \put(165,297){\framebox(40,\boxheight){}}
+  \put(165,298){\begin{tabular}[b]{F{17}E{2}F{16}E{2}}0 &ft. & 0& sq.\end{tabular}}
+  \put(165,294){\parbox[b][3\unitlength][b]{40\unitlength}{\centering\lfont with armour}}
+  \put(165,284){\framebox(40,\boxheight){}}
+  \put(165,285){\begin{tabular}[b]{F{17}E{2}@{\hspace{1ex}/\hspace{-1.6ex}}F{16}E{2}}0 &ft. & 0& \end{tabular}}
+  \put(165,281){\parbox[b][3\unitlength][b]{40\unitlength}{\lfont\centering fly/manoeuvrability}}
+  \put(135,271){\framebox(20,\boxheight){}}
+  \put(135,272){\begin{tabular}[b]{F{16}E{2}}0 &ft.\end{tabular}}
+  \put(135,267){\parbox[b][3\unitlength][b]{20\unitlength}{\centering\lfont swim}}
+  \put(160,271){\framebox(20,\boxheight){}}
+  \put(160,272){\begin{tabular}[b]{F{16}E{2}}0 &ft.\end{tabular}}
+  \put(160,267){\parbox[b][3\unitlength][b]{20\unitlength}{\centering\lfont climb}}
+  \put(185,271){\framebox(20,\boxheight){}}
+  \put(185,272){\begin{tabular}[b]{F{16}E{2}}0 &ft.\end{tabular}}
+  \put(185,267){\parbox[b][3\unitlength][b]{20\unitlength}{\centering\lfont burrow}}
+  \titlebox{0}{271}{50}{favourite}{meal}
+  \put(55,271){\framebox(75,\boxheight){\footnotesize Meat}}
+  \weapontable{0}{210}{null}{null}{null}{null}{null}{null}{null}
+  \weapontable{0}{158}{null}{null}{null}{null}{null}{null}{null}
+  \weapontable{0}{106}{null}{null}{null}{null}{null}{null}{null}
+  \weapontable{0}{54}{null}{null}{null}{null}{null}{null}{null}
+  \weapontable{0}{2}{null}{null}{null}{null}{null}{null}{null}
+
+
+  \put(210,510){
+  \begin{tabular}[b]{A{10}B{100}A{14}B{20}A{14}A{8}A{14}A{8}A{14}}
+     &\footnotesize \scshape Skill Names   &\lfont Total Bonus& &\lfont Ability Mod. &  &\lfont Ranks &  &\lfont Misc.\ Mod.\ \tabularnewline\hline
+  \end{tabular}}
+
+
+
+  \skill{characrobaticsclassskillcount}{210}{500}{Acrobatics}{Dex}{chardexmodcount}{characrobaticsrankscount}{characrobaticsmiscmodcount}
+  \skill{charappraiseclassskillcount}{210}{490}{Appraise}{Int}{charintmodcount}{charappraiserankscount}{charappraisemiscmodcount}
+  \skill{charbluffclassskillcount}{210}{480}{Bluff}{Cha}{charchamodcount}{charbluffrankscount}{charbluffmiscmodcount}
+  \skill{charclimbclassskillcount}{210}{470}{Climb}{Str}{charstrmodcount}{charclimbrankscount}{charclimbmiscmodcount}
+  \skill{charcraftoneclassskillcount}{210}{460}{Craft (optional)}{Int}{charintmodcount}{charcraftonerankscount}{charcraftonemiscmodcount}
+  \skill{charcrafttwoclassskillcount}{210}{450}{Craft (optional)}{Int}{charintmodcount}{charcrafttworankscount}{charcrafttwomiscmodcount}
+  \skill{charcraftthreeclassskillcount}{210}{440}{Craft (optional)}{Int}{charintmodcount}{charcraftthreerankscount}{charcraftthreemiscmodcount}
+  \skill{chardiplomacyclassskillcount}{210}{430}{Diplomacy}{Cha}{charchamodcount}{chardiplomacyrankscount}{chardiplomacymiscmodcount}
+  \trainskill{chardisabledeviceclassskillcount}{210}{420}{Disable Device}{Dex}{chardexmodcount}{chardisabledevicerankscount}{chardisabledevicemiscmodcount}
+  \skill{chardisguiseclassskillcount}{210}{410}{Disguise}{Cha}{charchamodcount}{chardisguiserankscount}{chardisguisemiscmodcount}
+  \skill{charescapeartistclassskillcount}{210}{400}{Escape Artist}{Dex}{chardexmodcount}{charescapeartistrankscount}{charescapeartistmiscmodcount}
+  \skill{charflyclassskillcount}{210}{390}{Fly}{Dex}{chardexmodcount}{charflyrankscount}{charflymiscmodcount}
+  \trainskill{charhandleanimalclassskillcount}{210}{380}{Handle Animal}{Cha}{charchamodcount}{charhandleanimalrankscount}{charhandleanimalmiscmodcount}
+  \skill{charhealclassskillcount}{210}{370}{Heal}{Wis}{charwismodcount}{charhealrankscount}{charhealmiscmodcount}
+  \skill{charintimidateclassskillcount}{210}{360}{Intimidate}{Cha}{charchamodcount}{charintimidaterankscount}{charintimidatemiscmodcount}
+  \trainskill{charknowledgearcanaclassskillcount}{210}{350}{Knowledge (arcana)}{Int}{charintmodcount}{charknowledgearcanarankscount}{charknowledgearcanamiscmodcount}
+  \trainskill{charknowledgedungeoneeringclassskillcount}{210}{340}{Knowledge (dungeoneering)}{Int}{charintmodcount}{charknowledgedungeoneeringrankscount}{charknowledgedungeoneeringmiscmodcount}
+  \trainskill{charknowledgeengineeringclassskillcount}{210}{330}{Knowledge (engineering)}{Int}{charintmodcount}{charknowledgeengineeringrankscount}{charknowledgeengineeringmiscmodcount}
+  \trainskill{charknowledgegeographyclassskillcount}{210}{320}{Knowledge (geography)}{Int}{charintmodcount}{charknowledgegeographyrankscount}{charknowledgegeographymiscmodcount}
+  \trainskill{charknowledgehistoryclassskillcount}{210}{310}{Knowledge (history)}{Int}{charintmodcount}{charknowledgehistoryrankscount}{charknowledgehistorymiscmodcount}
+  \trainskill{charknowledgelocalclassskillcount}{210}{300}{Knowledge (local)}{Int}{charintmodcount}{charknowledgelocalrankscount}{charknowledgelocalmiscmodcount}
+  \trainskill{charknowledgenatureclassskillcount}{210}{290}{Knowledge (nature)}{Int}{charintmodcount}{charknowledgenaturerankscount}{charknowledgenaturemiscmodcount}
+  \trainskill{charknowledgenobilityclassskillcount}{210}{280}{Knowledge (nobility)}{Int}{charintmodcount}{charknowledgenobilityrankscount}{charknowledgenobilitymiscmodcount}
+  \trainskill{charknowledgeplanesclassskillcount}{210}{270}{Knowledge (planes)}{Int}{charintmodcount}{charknowledgeplanesrankscount}{charknowledgeplanesmiscmodcount}
+  \trainskill{charknowledgereligionclassskillcount}{210}{260}{Knowledge (religion)}{Int}{charintmodcount}{charknowledgereligionrankscount}{charknowledgereligionmiscmodcount}
+  \trainskill{charlinguisticsclassskillcount}{210}{250}{Linguistics}{Int}{charintmodcount}{charlinguisticsrankscount}{charlinguisticsmiscmodcount}
+  \skill{charperceptionclassskillcount}{210}{240}{Perception}{Wis}{charwismodcount}{charperceptionrankscount}{charperceptionmiscmodcount}
+  \skill{charperformoneclassskillcount}{210}{230}{Perform (optional)}{Cha}{charchamodcount}{charperformonerankscount}{charperformonemiscmodcount}
+  \skill{charperformtwoclassskillcount}{210}{220}{Perform (optional)}{Cha}{charchamodcount}{charperformtworankscount}{charperformtwomiscmodcount}
+  \trainskill{charprofessiononeclassskillcount}{210}{210}{Profession (optional)}{Wis}{charwismodcount}{charprofessiononerankscount}{charprofessiononemiscmodcount}
+  \trainskill{charprofessiontwoclassskillcount}{210}{200}{Profession (optional)}{Wis}{charwismodcount}{charprofessiontworankscount}{charprofessiontwomiscmodcount}
+  \skill{charrideclassskillcount}{210}{190}{Ride}{Dex}{chardexmodcount}{charriderankscount}{charridemiscmodcount}
+  \skill{charsensemotiveclassskillcount}{210}{180}{Sense Motive}{Wis}{charwismodcount}{charsensemotiverankscount}{charsensemotivemiscmodcount}
+  \trainskill{charsleightofhandclassskillcount}{210}{170}{Sleight of Hand}{Dex}{chardexmodcount}{charsleightofhandrankscount}{charsleightofhandmiscmodcount}
+  \trainskill{charspellcraftclassskillcount}{210}{160}{Spellcraft}{Int}{charintmodcount}{charspellcraftrankscount}{charspellcraftmiscmodcount}
+  \skill{charstealthclassskillcount}{210}{150}{Stealth}{Dex}{chardexmodcount}{charstealthrankscount}{charstealthmiscmodcount}
+  \skill{charsurvivalclassskillcount}{210}{140}{Survival}{Wis}{charwismodcount}{charsurvivalrankscount}{charsurvivalmiscmodcount}
+  \skill{charswimclassskillcount}{210}{130}{Swim}{Str}{charstrmodcount}{charswimrankscount}{charswimmiscmodcount}
+  \trainskill{charusemagicdeviceclassskillcount}{210}{120}{Use Magic Device}{Cha}{charchamodcount}{charusemagicdevicerankscount}{charusemagicdevicemiscmodcount}
+  \put(214.5,110){\parbox[b][10\unitlength][c]{100\unitlength}{ \tiny\scshape $\footnotesize\cancel\square$  Class Skill\hspace{2ex} * trained only}}
+
+  \put(215,100){\parbox[b][10\unitlength][c]{200\unitlength}{\small\scshape Conditional Modifiers:}}
+  \put(215,55){\parbox[b][43\unitlength][t]{200\unitlength}{\itshape blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah}}
+  \put(211,55){\framebox(207,45){}}
+  \put(215,40){\parbox[b][10\unitlength][c]{100\unitlength}{\small\scshape Languages Spoken:}}
+  \put(215,0){\parbox[b][38\unitlength][t]{100\unitlength}{\itshape \charlanguagesspoken }}
+  \put(211,0){\framebox(207,40){}}
+
+\end{picture}
+
+\newpage
+
+\noindent\begin{picture}(420,594)
+  \put(0,594){\begin{tabular}[t]{>{\centering}p{40\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} } \printacitems \end{tabular}}
+  
+  \put(0,500){\begin{tabular}[t]{>{\centering}p{40\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} >{\centering}p{30\unitlength} }\uppercase{totals} & \plusminus{totalacitemsbonus} & & \plusminus{totalacitemscheckpenalty} & \arabic{totalacitemsspellfailure}\% & \arabic{totalacitemsweight}~lbs. & \end{tabular}}
+
+  \singletitlebox{0}{475}{100}{10}{gear}
+  \put(0,470){\begin{tabular}[t]{@{}p{70\unitlength} @{\hspace{1\unitlength}}>{\centering}p{29\unitlength}@{}}\printgearitems \end{tabular}}
+
+  \singletitlebox{125}{470}{180}{10}{feats}
+  \put(125,460){\parbox[t][200\unitlength][t]{180\unitlength}{\itshape \charfeats}}
+
+  \singletitlebox{310}{584}{110}{10}{spells}
+  \put(310,574){\parbox[t][300\unitlength][t]{110\unitlength}{\itshape \charspelldump}}
+
+  %% TODO change this bit so that it can take much more than triple digits for money. Also, hook up the money to a weight.
+  \stretchlabels{35}{10}{100}{PP, GP, SP, CP}
+  \singletitlebox{0}{0}{30}{9}{Money}  \stretchattributes{35}{0}{100}{\arabic{charplatinumcount},\arabic{chargoldcount},\arabic{charsilvercount},\arabic{charcoppercount}}
+\end{picture}
+
+\end{document}

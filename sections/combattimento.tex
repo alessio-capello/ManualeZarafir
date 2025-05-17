@@ -1,0 +1,117 @@
+\documentclass[../manuale_main.tex]{subfiles}
+
+
+
+\begin{document}
+
+In questo capitolo tratteremo le regole che gestiscono lo scontro tra due o più personaggi. in questa sezione verrà considerato uno scontro generico, senza specificare se l'attaccante utilizzi un'arma a distanza o da corpo a corpo. Le regole specifiche che differenziano i due casi verranno trattate successivamente.\\
+
+\subsection{Iniziativa}
+Prima di considerare i vari attacchi, è necessario considerare l'ordine con i quali i personaggi svolgeranno le loro azioni.\\
+Per farlo ogni personaggio coinvolto nello scontro tira un D6. Somma a questo risultato il valore della propria ``\emph{Reattività}'' e tutti i modificatori relativi all'iniziativa. Le azioni seguono l'ordine dei risultati ottenuti, dal più alto al più basso.
+In alcune situazioni il master potrebbe decidere di ignorare l'iniziativa e stabilire arbitrariamente l'ordine di esecuzione delle azioni.
+
+\subsection{Fasi del combattimento}
+Il combattimento si svolge in questo modo:
+\begin{enumerate}
+\item L'attaccante dichiara il suo bersaglio.
+\item Il difensore dichiara la sua intenzione di \emph{parare} il colpo (se può vedere l'attacco in arrivo) o utilizzare una magia di \emph{protezione}.
+\item Se prova a parare o a lanciare una magia, il difensore esegue un TSD per verificare se riesce nell'intento.
+\item L'attaccante prova a colpire il bersaglio eseguendo un TDS.
+\item Se l'attacco è andato a segno, si tira 1D6 per stabilire dove l'attacco abbia colpito.
+\item Vengono calcolati i danni.
+\end{enumerate} 
+Ovviamente se un'azione fallisse, anche quelle successive verrebbero influenzate (se l'attaccante non riesce a colpire, il tiro per verificare la posizione e il conto dei danni persono di significato).\\
+Se il difensore risponderà all'attacco, le azioni sopra enunciate verranno ripetute (ovviamente invertendo i ruoli di attaccante e difensore).
+Vediamo ora nel dettaglio le fasi precedentemente enunciate per capirne il funzionamento.
+
+\subsection{Dichiarazione dell'attacco}
+Sebbene il termine possa far immaginare situazioni in cui il personaggio dichiara a voce alta cosa intende fare, non si intende questo.
+Banalmente il giocatore deve comunicare al master cosa il suo personaggio intenda fare e come, in modo che si possano conoscere e stabilire i parametri di difficoltà necessari per le fasi successive. 
+
+\subsection{Dichiarazione delle intenzioni difensive}
+Come per la dichiarazione dell'attacco, anche in questo caso si tratta di comunicare al master come il proprio personaggio intende reagire all'azione offensiva (se vuole farlo). Ovviamente potrebbe essere necessario che il personaggio sia consapevole dell'azione rivolta contro di lui: un attacco alle spalle difficilmente potrà essere parato con prontezza, o comunque potrebbe avere dei modificatori addizionali per la riuscita dell'azione.
+\paragraph{Difendere un alleato}\mbox{}\\
+In questa fase è anche possibile per un personaggio provare a usare gli strumenti in sui possesso per difendere l'atteato vittima dell'attacco. Anche in questo caso la fattibilità dell'azione ed eventuali modificatori alla difficoltà verranno stabiliti dal master.
+
+\subsection{Esecuzione dell'azione difensiva}
+Nel caso in cui si intenda parare con uno scudo l'attacco, il difensore deve eseguire un TDS su ``\emph{Parare}''. La difficoltà è pari a: \emph{Valore dell'abilità che l'attaccante userà per colpire più eventuali modificatori}. In caso di successo il difensore otterrà una riduzione dei danni migliorata dalla presenza dello scudo.\\
+Nel caso in cui il difensore voglia utilizzare una magia, il TDS avrà una difficoltà pari a quella di lancio della magia più eventuali modificatori.\\
+\textbf{In caso di fallimento nella parata o nel lancio della magia, l'attaccante avrà un modificatore di -2 alla difficoltà nel colpire con l'arma il personaggio}. Questo a causa del fatto che il difensore ha ``sacrificato''  parte della sua mobilità per preparare la sua difesa.
+
+\subsection{Esecuzione dell'azione offensiva}
+L'attaccante esegue un TDS per provare a colpire il suo bersaglio. Se possibile, l'attaccante può scegliere eseguire un \emph{attacco mirato} per colpire il bersaglio in una posizione precisa (tra: testa, braccia, busto e gambe). Se lo fa, subisce un modificatore di +1 alla difficoltà per colpire.\\ La difficoltà è pari a: \emph{difficoltà nel colpire il difensore (determinata dall'abilità \emph{evitare}, specializzazioni e talenti relativi ed eventuali oggetti pesanti indossati) + modificatori alla difficoltà nel colpire dell'attaccante}.
+In caso di insuccesso l'attacco sarà fallito e il master ne determinerà le conseguenze.
+
+\subsection{Determinare dove il bersaglio sia stato colpito}
+Se l'attaccante non ha scelto la posizione in cui colpire il bersaglio, dopo che l'attacco è andato a segno, il giocatore attaccante tira 1D6. Il risultato del tiro stabilisce dove il personaggio in difesa sia stato colpito:\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\linewidth}{|c| l X|}
+\hline
+1&\textbf{Gambe}&Il bersaglio è stato colpito alle gambe, nel calcolo dei danni verrà considerata la protezione relativa (Schinieri).\\
+2&\textbf{Busto}&Il bersaglio è stato colpito al busto, nel calcolo dei danni verrà considerata la protezione relativa (Corazza).\\
+3&\textbf{Braccia}&Il bersaglio è stato colpito alle braccia, nel calcolo dei danni verrà considerata la protezione relativa (Bracciali e Guanti).\\
+4&\textbf{Testa}&Il bersaglio è stato colpito alla testa, nel calcolo dei danni verrà considerata la protezione relativa (Elmo).\\
+5&\textbf{Zona non protetta}&Il bersaglio è stato colpito in un punto scoperto dall'armatura: i danni subiti dal difensore non vengono ridotti dalla protezione offerta dall'equipaggiamento. Anche un'eventuale parata sarà ignorata. Eventuali talenti possono ridefinire queste casistica.\\
+6&\textbf{Disarmato}&Il bersaglio è stato colpito direttamente sull'arma, facendola cadere. Il difensore non subisce danni in seguito al disarmo. Non è possibile disarmare con le armi a distanza (in caso di uscita del 6 sul tiro, considerate il colpo come inflitto alle \emph{braccia}). Eventuali talenti possono ridefinire queste casistica. Se il bersaglio non può essere disarmato a causa di talenti o effetti particolari dell'arma, non vengono applicati danni nè l'effetto di disarmo.\\
+\hline
+\end{tabularx}
+
+\subsection{Calcolo dei danni}
+Dopo aver stabilito la zona colpita, si procede al calcolo dei danni subiti dal difensore, che sono pari a: \textit{Dado relativo all'arma + modificatori attaccante - (armatura della parte colpita difensore + modificatori difensore + bonus scudo (se si è parato con successo l'attacco)}\\\mbox{}\\
+\emph{I tipi di dado da considerare dipendentemente dall'arma sono indicati nella sesione equipaggiamento}
+
+
+\subsection{Esempio di un turno combattimento}
+Per chiarire ciò che  stato appena illustrato e recuperare anche dei concetti espressi nei capitoli precedenti, verrà proposto un esempio di un turno di combattimento. I protagonisti di questa azione sono Valon (il giocatore che lo muove è \emph{G}), Savra  (il giocatore che la muove è \emph{A}) e un combattente ostile (mosso dal \emph{master ``M''}).
+\clearpage 
+\begin{framed}
+\textit{Korr solleva e agita la sua mazza chiodata, puntando Valon.}
+\begin{quote}
+M: ``G, Korr ti sta attaccando, che fai?''\\
+G: ``Provo a parare con lo scudo''\\
+A: ``Io provo a lanciare l'incantesimo \emph{Protezione}''\\
+M: ``Tiriamo i dadi, la difficoltà per parare è pari all'abilità \emph{Armi a due mani} di Korr, ovvero 4, la difficoltà per lanciare è pari a 8. Avete entrambi un +1 alla difficoltà perché siete stati colti di sorpresa''
+\end{quote}
+Vengono lanciati i dadi:
+\begin{itemize}
+\item TDS di Valon per parare: 13 ``Forza'' + 8 ``Parare'' - (4 difficoltà per parare +1 modificatore perché Valon utilizza uno scudo pesante + 1 modificatore dato dal master) - 12 (Risultato del lancio di 3d6) = 3 \textbf{La parata ha avuto successo}.
+\item TDS di Savra per lanciare la magia: 13 ``Intelligenza'' + 7 ``Tessimagie'' - (8 difficoltà di lancio della magia + 1 modificatore dato dal master) - 15  (Risultato del lancio di 3d6) = -4  \textbf{Il lancio della magia non ha avuto successo}.
+\end{itemize}
+
+\begin{quote}
+M: ``La parata è riuscita, ma il lancio della magia è fallito; controlliamo se Korr è riuscito a colpirti. Hai 5 in ``\emph{Evitare}'' che ti sarebbero una difficoltà pari a 2 per essere colpito, hai però la specializzazione ``\emph{Statico}'' all'1 che ti dà un -1 alla difficoltà. Vieni quindi colpito con difficoltà base pare a 1. Korr ha un'arma pesante, che gli dà un +1 addizionale alla difficoltà per colpire''\\
+\end{quote}
+
+
+\begin{itemize}
+\item TDS di Korr per colpire: 12 ``Forza'' + 4 ``Armi a due mani'' - (2 difficoltà totale per colpire Valon) - 11 (Risultato del lancio di 3d6) = 5 \textbf{Il colpo è andato a segno}.
+\end{itemize}
+
+Si controlla quindi la posizione dove Valon è stato colpito; Si lancia un D6.\\
+\textbf{2}: Colpito al petto.\\
+
+\begin{quote}
+M: ``Ti ha colpito al petto, hai una riduzione danni pari a 4 per ciò che riguarda l'armatura, hai inoltre un'ulteriore riduzione di 4 danni grazie allo scudo e la specializzazione ``\emph{Utilizzo scudi pesanti} all'1 che ti dà un'ulteriore riduzione di 1 danno''. Korr ha l'abilità ``\emph{Arte della guerra}'' pari a 6 che gli fornisce 3 danni bonus, ha inoltre la specializzazione ``\emph{Armi pesanti}'' a 2 che gli fornisce un modificatore di +2 al danno se usa armi pesanti.''\\
+\end{quote}
+Si calcolano i danni subiti da Valon; Si lancia un D10 ed esce come risultato 6.\\
+\textbf{6}: Valon subisce quindi \textit{6+3+2 - (4+4+1) = 3 danni}.\\
+\end{framed}
+
+
+\clearpage
+
+\subsection{Regole aggiuntive per il combattimento}
+\paragraph{Combattimento con due armi}\mbox{}\\
+Un personaggio può scegliere di utilizzare una coppia di armi leggere, ciò porta a una serie di vantaggi e svantaggi.
+\begin{itemize}
+\item Non possono essere usate due armi medie (a meno che non si possegga il talento "Armi gemelle" di "Armi a una mano").
+\item Vengono considerati i modificatori di entrambe le armi.
+\item Viene eseguito un solo TDS per colpire, ma con un modificatore di +2 alla difficoltà.
+\item La posizione di ciascuno dei due attacchi è determinata separatamente.
+\item Il danno di ciascuno dei due attacchi è calcolato separatamente.
+\item I due attacchi sono considerati separatamente, quindi la riduzione al danno delle protezioni del bersaglio è considerata per entrambi.
+\item Viene ignorato ogni modificatore al danno dato da "Arte della guerra", dalle sue specializzazioni e talenti.
+\end{itemize}
+
+\end{document}

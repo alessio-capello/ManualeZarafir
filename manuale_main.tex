@@ -1,203 +1,265 @@
-% !TEX TS-program = pdflatex
-% !TEX encoding = UTF-8 Unicode
+% ------------------------------------------------------------------
+% PREAMBOLO "zarafir-Template" - Formato A4
+% ------------------------------------------------------------------
+\documentclass[12pt,openright,twoside]{scrbook} % KOMA-Script nativo
 
-% This is a simple template for a LaTeX document using the "article" class.
-% See "book", "report", "letter" for other types of document.
 
-\documentclass[10pt]{article} % use larger type; default would be 10pt
+% ---- Font: Garamond (testo) + Caslon Antique (titoli) ------------
+\usepackage{fontspec}        
+\setmainfont{Garamond}
 
-\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+% Font per titoli e intestazioni (Caslon Antique)
+\newfontfamily\zarafirtitlefont[
+  Path = C:/Users/Alessio/AppData/Local/Microsoft/Windows/Fonts/,
+  Extension = .ttf,
+  UprightFont = Caslo-an
+]{CaslonAntique}
 
-%%% Examples of Article customizations
-% These packages are optional, depending whether you want the features they provide.
-% See the LaTeX Companion or other references for full information.
+% ---- Margini e spaziatura ---------------------------------------
 
-%%% PAGE DIMENSIONS
-\usepackage{geometry} % to change the page dimensions
-\geometry{a4paper} % or letterpaper (US) or a5paper or....
-%\geometry{margin=2in} % for example, change the margins to 2 inches all round
-%\geometry{landscape} % set up the page for landscape
-%   read geometry.pdf for detailed page layout information
-\geometry{hmargin=2.3cm,top=2.8cm,bottom=2.2cm}
+\usepackage{geometry}
+\geometry{a4paper,top=40mm,bottom=40mm,left=40mm,right=40mm} % ,bindingoffset=10mm
+\usepackage{setspace}
+\onehalfspacing
 
-\usepackage{graphicx} % support the \includegraphics command and options
-
-\graphicspath{{sezioni/}{../sezioni/}}
-
- \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
-
-%%% PACKAGES
-\usepackage{booktabs} % for much better looking tables
-\usepackage{array} % for better arrays (eg matrices) in maths
-\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
-\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
-\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
-% These packages are all incorporated in the memoir class to one degree or another...
-
-%%% HEADERS & FOOTERS
-\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
-\pagestyle{fancy} % options: empty , plain , fancy
-\renewcommand{\headrulewidth}{0pt} % customise the layout...
-\lhead{}\chead{}\rhead{}
-\lfoot{}\cfoot{\thepage}\rfoot{}
-
-%%% SECTION TITLE APPEARANCE
-\usepackage{sectsty}
-\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
-% (This matches ConTeXt defaults)
-
-%%% ToC (table of contents) APPEARANCE
-\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
-\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
-\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
-\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
-
-\usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
-
-%font sezioni ecc
+% ------------------------------------------------------------------
+% CAPITOLI in stile “CAPITOLO …” con numero gigante
+% ------------------------------------------------------------------
 \usepackage{titlesec}
 
-\titleformat{\section} {\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
-\titleformat{\subsection} {\normalfont\large\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection} {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
-\titleformat{\paragraph}[runin] {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titleformat{\subparagraph}[runin] {\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+% grandezza del numero (puoi cambiarla: 90→100 pt …)
+\newcommand{\chapnumfont}{\zarafirtitlefont\fontsize{90}{100}\selectfont}
+
+% formato visuale del titolo di capitolo
+\titleformat{\chapter}[display]%
+  {\raggedleft}               % tutto il blocco allineato a destra
+  {%
+    \zarafirtitlefont\scshape\fontsize{32}{36}\selectfont % parola "CAPITOLO" ingrandita
+    \MakeUppercase{Capitolo} \\[-1.2\baselineskip] % meno spazio sopra il numero
+    \chapnumfont\thechapter   % numero gigante
+  }%
+  {0pt}                       % spazio orizz. tra etichetta e titolo (non serve)
+  {\vspace{1cm}\raggedright\huge\bfseries} % spaziatura regolata
+  [\vspace{0.5cm}\rule{\textwidth}{0.4pt}\vspace{1cm}] % linea e spazio sotto
+
+% spazi prima / dopo
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+% ---- Sezioni e sottosezioni ---------------------------------------
+\setkomafont{section}{\zarafirtitlefont\LARGE\bfseries}      % Sezioni grandi
+\setkomafont{subsection}{\zarafirtitlefont\Large\bfseries}   % Sottosezioni medie
+\setkomafont{subsubsection}{\zarafirtitlefont\normalsize\bfseries} % Sotto-sotto piccole
+
+% ---- Spaziatura delle sezioni -------------------------------------
+\RedeclareSectionCommand[
+  beforeskip=15pt,  % spazio prima della sezione
+  afterskip=10pt    % spazio dopo la sezione
+]{section}
+
+\RedeclareSectionCommand[
+  beforeskip=12pt,
+  afterskip=8pt
+]{subsection}
+
+\RedeclareSectionCommand[
+  beforeskip=10pt,
+  afterskip=6pt
+]{subsubsection}
+
+% ---- Stile Sommario (Indice) con KOMA-Script --------------------
+\KOMAoptions{toc=graduated}  % Stile del sommario migliorato
+\renewcommand{\contentsname}{Indice}  % Cambia il titolo in italiano
+
+% Stile del titolo "Indice"
+\makeatletter
+\renewcommand{\tableofcontents}{%
+  \chapter*{\centering \Huge\bfseries\rmfamily Indice} % Titolo centrato e grande
+  \addcontentsline{toc}{chapter}{Indice} % Aggiungi al sommario
+  \vspace{0.5cm}
+  \hrule
+  \vspace{0.5cm}
+  \@starttoc{toc}
+}
+\makeatother
+
+% ---- Stile Sommario (Indice) con KOMA-Script --------------------
+\KOMAoptions{toc=graduated}  % Stile del sommario migliorato
+\renewcommand{\contentsname}{Indice}  % Cambia il titolo in italiano
+
+% Font Garamond per tutto il sommario
+\setkomafont{chapterentry}{\rmfamily\Large}                % Capitoli in Garamond, grande
+\setkomafont{section}{\rmfamily\Large}               % Sezioni in Garamond, normali
+\setkomafont{subsection}{\rmfamily\normalsize}       % Sottosezioni in Garamond
+\setkomafont{subsubsection}{\rmfamily\small}         % Sotto-sottosezioni in Garamond
+\setkomafont{pagenumber}{\rmfamily}                  % Numeri di pagina in Garamond
+
+% Nessun effetto speciale, nessuna linea tratteggiata
 
 
-%subfile
+% Stile del titolo "Indice"
+\makeatletter
+\renewcommand{\tableofcontents}{%
+  \chapter*{\centering \Huge\rmfamily Indice} % Titolo centrato e grande in Garamond
+  \addcontentsline{toc}{chapter}{Indice} % Aggiungi al sommario
+  \vspace{0.5cm}
+  \@starttoc{toc}
+}
+\makeatother
+
+% ---- Intestazioni e piè di pagina (KOMA) -------------------------
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
+
+% Definizione del font Garamond
+\newfontfamily\garamondfont{Garamond}
+
+% Numero di pagina centrato in basso in Garamond
+\cfoot{\garamondfont\thepage} % Numeri di pagina in basso centrati in Garamond
+
+% Intestazioni delle pagine: titolo capitolo in alto in Garamond
+\ihead[\garamondfont\leftmark]{\garamondfont\leftmark} % Titolo capitolo in Garamond
+\ohead{}
+
+% Aggiorna l'automark solo per i capitoli (evita conflitti)
+\automark[chapter]{chapter}
+
+% ---- Stile pagina senza intestazione (solo per la prima pagina del capitolo) ----
+\newcommand{\noheadfirstpage}{%
+  \thispagestyle{plain} % Usa lo stile "plain" senza intestazione
+  \renewcommand{\headmark}{} % Rimuove l'intestazione (head)
+}
+
+
+
+% ---- Ipertesto & PDF metadata ------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  pdftitle={Zarafir Manuale},
+  pdfauthor={Il Tuo Nome}
+}
+
+
+% ---- Itemize Eleganti per GDR (3 Livelli) --------------------
+\usepackage{enumitem}  % Per personalizzare itemize
+
+% Primo livello (Diamond - ♦)
+\setlist[itemize,1]{%
+  label={\textcolor{black}{♦}},    % Simbolo diamante (♦)
+  labelsep=0.75em,                 % Spazio tra punto e testo
+  left=1.5em,                      % Rientro per il primo livello
+  font=\rmfamily,                  % Garamond per il testo
+  itemsep=0.4em,                   % Spazio verticale tra voci
+  topsep=0.5em                     % Spazio prima della lista
+}
+
+% Secondo livello (Circle - ●)
+\setlist[itemize,2]{%
+  label={\textcolor{black}{\textbullet}}, % Cerchio pieno (●)
+  labelsep=0.75em,                       % Spazio tra punto e testo
+  left=1.75em,                            % Rientro per il secondo livello
+  font=\rmfamily,                        % Garamond per il testo
+  itemsep=0.3em                          % Spazio verticale tra voci
+}
+
+% Terzo livello (Period - ·)
+\setlist[itemize,3]{%
+  label={\textcolor{black}{\textperiodcentered}}, % Punto centrato (·)
+  labelsep=0.75em,                               % Spazio tra punto e testo
+  left=0.5em,                                    % Rientro per il terzo livello
+  font=\rmfamily,                                % Garamond per il testo
+  itemsep=0.2em                                  % Spazio verticale tra voci
+}
+
+
+
+% ---- Per capitoli in subfile -------------------------------------
 \usepackage{subfiles}
 
-%tab command
-\usepackage{tabto}
 
-%frame command
-\usepackage{framed}
-
-%table required package
-\usepackage{array}
-
-%multicolumn
-\usepackage{multicol}
-
-%tabular
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{ltablex}
-
-%tabella abilità
-\newcolumntype{b}{>{\hsize=1.6\hsize}X}
-\newcolumntype{s}{>{\hsize=0.45\hsize}X}
-\newcolumntype{m}{>{\hsize=0.95\hsize}X}
-\newcolumntype{k}{>{\hsize=2.05\hsize}X}
-
-%tabella magie
-\newcolumntype{N}{>{\hsize=0.75\hsize}X}
-\newcolumntype{D}{>{\centering\hsize=0.65\hsize}X}
-\newcolumntype{T}{>{\centering\hsize=0.8\hsize}X}
-\newcolumntype{G}{>{\centering\hsize=0.75\hsize}X}
-\newcolumntype{Y}{>{\hsize=2.05\hsize}X}
-
-%tabelle bestiario
-
-\newcolumntype{Q}{>{\hsize=0.3\hsize}X}
-\newcolumntype{F}{>{\hsize=0.7\hsize}X}
-
-%BACKGROUD - DA RIMUOVERE PER VERSIONE STAMPA  
-%                       https://tex.stackexchange.com/questions/167719/how-to-use-background-image-in-latex
-	\usepackage[pages=some]{background}
+% ---- Import immagini -------------------------------------
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 
-	\backgroundsetup{
-	scale=1,
-	color=black,
-	opacity=0.4,
-	angle=0,
-	contents={%
-	  \includegraphics[width=\paperwidth,height=\paperheight]{../background-image-bw}
-	  }%
-	}
+% ------------------------------------------------------------------
+% INIZIO DOCUMENTO
+% ------------------------------------------------------------------
 
-%----------------------fine sezione backgroud
-
-
-%hypenation
-%\hyphenpenalty 10000
-%\hyphenpenalty 10000 
-
-%%% END Article customizations
-
-%%% The "real" document content comes below...
-
-%\BgThispage
-
-\title{Nightfall}
+\title{Zarafir}
 \author{}
-\date{} % Activate to display a given date or no date (if empty),
-         % otherwise the current date is printed 
+\date{} 
 
 \begin{document}
- \maketitle
+\frontmatter
+\begin{titlepage}
+  \centering
+  \includegraphics[width=\textwidth]{upscaled_logo}
+  \includegraphics[width=\textwidth]{upscaled_text}
+  {\Huge\bfseries\zarafirtitlefont  Manuale di Gioco di Ruolo\vspace{1cm}\par}
+  %{\Large Vodars\par}
+  \vfill
+  {\large Versione \today\par}
+\end{titlepage}
 
-\tableofcontents{}
+\tableofcontents                    
 \cleardoublepage
+\mainmatter               
 
-\section{Introduzione}
-\subfile{sezioni/introduzione}
+%------------TEST
+
+
+%----------FINE TEST
+
+% ---- Capitoli separati -------------------------------------------
+\chapter{Introduzione}
+\noheadfirstpage
+\subfile{sections/introduzione}
 \clearpage
 
-\section{Ambientazione}
-\subfile{sezioni/ambientazione}
+\chapter{Obiettivo del Manuale}
+\noheadfirstpage
+\subfile{sections/ambientazione}
 \clearpage
 
-\section{Creazione personaggio}
-\subfile{sezioni/creazione_pg}
+\chapter{Creazione Personaggio}
+\noheadfirstpage
+\subfile{sections/creazione_pg}
 \clearpage
 
-\section{Punti vita, mana ed esperienza}
-\subfile{sezioni/vita_mana}
+\chapter{Bussola Morale}
+\noheadfirstpage
+\subfile{sections/bussola_morale}
+\clearpage
+
+\chapter{Punti Vita, Stress Mentale, Esperienza}
+\noheadfirstpage
+\subfile{sections/vita_mana}
+\clearpage
+
+\chapter{Conoscenze}
+\noheadfirstpage
+\subfile{sections/conoscenze}
+\clearpage
+
+\chapter{Tiro di Simulazione}
+\noheadfirstpage
+\subfile{sections/TDS}
+\clearpage
+
+\chapter{Abilità}
+\noheadfirstpage
+\subfile{sections/abilita}
+\clearpage
+
+\chapter{Talenti}
+\noheadfirstpage
+\subfile{sections/talenti}
 \clearpage
 
 
-\section{Conoscenze}
-\subfile{sezioni/conoscenze}
-\clearpage 
 
-\section{Il Tiro di Simulazione}
-\subfile{sezioni/tds}
-\clearpage 
-
-\section{Abilità e talenti}
-\subfile{sezioni/abilita_talenti}
-\clearpage 
-
-
-\section{Combattimento}
-\subfile{sezioni/combattimento}
-\clearpage 
-
-\section{Equipaggiamento}
-\subfile{sezioni/equipaggiamento}
-\clearpage 
-
-\section{Magia}
-\subfile{sezioni/magie}
-\clearpage 
-
-\section{Condizioni particolari}
-\subfile{sezioni/effetti_stato}
-\clearpage
-
-\section{Trappole}
-\subfile{sezioni/trappole}
-\clearpage 
-
-\section{Compagno animale ed Evocazioni}
-\subfile{sezioni/famigli}
-\clearpage 
-
-\section{Bestiario}
-\subfile{sezioni/bestiario}
-\clearpage 
 
 \end{document}
