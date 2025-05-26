@@ -23,7 +23,7 @@
 \onehalfspacing
 
 % ------------------------------------------------------------------
-% CAPITOLI in stile “CAPITOLO …” con numero gigante
+% CAPITOLI in stile “CAPITOLO …” con numero gigante e cornice regolata
 % ------------------------------------------------------------------
 \usepackage{titlesec}
 
@@ -34,21 +34,22 @@
 \titleformat{\chapter}[display]%
   {\raggedleft}               % tutto il blocco allineato a destra
   {%
+    \vspace*{-0.8cm} % Sposta il testo verso l'alto, entra nel margine
     \zarafirtitlefont\scshape\fontsize{32}{36}\selectfont % parola "CAPITOLO" ingrandita
     \MakeUppercase{Capitolo} \\[-1.2\baselineskip] % meno spazio sopra il numero
     \chapnumfont\thechapter   % numero gigante
   }%
   {0pt}                       % spazio orizz. tra etichetta e titolo (non serve)
   {\vspace{1cm}\raggedright\huge\bfseries} % spaziatura regolata
-  [\vspace{0.5cm}\rule{\textwidth}{0.4pt}\vspace{1cm}] % linea e spazio sotto
+  [\vspace{0.5cm}\centering\rule{\textwidth}{0.4pt}\vspace{1cm}] % linea centrata e spazio sotto
 
 % spazi prima / dopo
 \titlespacing*{\chapter}{0pt}{0pt}{20pt}
 
 % ---- Sezioni e sottosezioni ---------------------------------------
-\setkomafont{section}{\zarafirtitlefont\LARGE\bfseries}      % Sezioni grandi
-\setkomafont{subsection}{\zarafirtitlefont\Large\bfseries}   % Sottosezioni medie
-\setkomafont{subsubsection}{\zarafirtitlefont\normalsize\bfseries} % Sotto-sotto piccole
+\setkomafont{section}{\rmfamily\LARGE\bfseries}      % Sezioni grandi
+\setkomafont{subsection}{\rmfamily\Large\bfseries}   % Sottosezioni medie
+\setkomafont{subsubsection}{\rmfamily\normalsize\bfseries} % Sotto-sotto piccole
 
 % ---- Spaziatura delle sezioni -------------------------------------
 \RedeclareSectionCommand[
@@ -66,35 +67,11 @@
   afterskip=6pt
 ]{subsubsection}
 
-% ---- Stile Sommario (Indice) con KOMA-Script --------------------
-\KOMAoptions{toc=graduated}  % Stile del sommario migliorato
-\renewcommand{\contentsname}{Indice}  % Cambia il titolo in italiano
 
-% Stile del titolo "Indice"
-\makeatletter
-\renewcommand{\tableofcontents}{%
-  \chapter*{\centering \Huge\bfseries\rmfamily Indice} % Titolo centrato e grande
-  \addcontentsline{toc}{chapter}{Indice} % Aggiungi al sommario
-  \vspace{0.5cm}
-  \hrule
-  \vspace{0.5cm}
-  \@starttoc{toc}
-}
-\makeatother
 
 % ---- Stile Sommario (Indice) con KOMA-Script --------------------
 \KOMAoptions{toc=graduated}  % Stile del sommario migliorato
 \renewcommand{\contentsname}{Indice}  % Cambia il titolo in italiano
-
-% Font Garamond per tutto il sommario
-\setkomafont{chapterentry}{\rmfamily\Large}                % Capitoli in Garamond, grande
-\setkomafont{section}{\rmfamily\Large}               % Sezioni in Garamond, normali
-\setkomafont{subsection}{\rmfamily\normalsize}       % Sottosezioni in Garamond
-\setkomafont{subsubsection}{\rmfamily\small}         % Sotto-sottosezioni in Garamond
-\setkomafont{pagenumber}{\rmfamily}                  % Numeri di pagina in Garamond
-
-% Nessun effetto speciale, nessuna linea tratteggiata
-
 
 % Stile del titolo "Indice"
 \makeatletter
@@ -106,30 +83,49 @@
 }
 \makeatother
 
+% ---- Font Garamond per tutto il Sommario -------------------------
+\renewcommand{\chapterformat}{\rmfamily\Large}    % Font Garamond per i capitoli
+\renewcommand{\sectionformat}{\rmfamily\large}    % Font Garamond per le sezioni
+\renewcommand{\subsectionformat}{\rmfamily\normalsize} % Font Garamond per le sottosezioni
+\renewcommand{\subsubsectionformat}{\rmfamily\small} % Font Garamond per le sotto-sottosezioni
+\renewcommand{\pnumfont}{\rmfamily}               % Numeri di pagina in Garamond
+
+% ---- Spaziatura Ottimizzata per l'Indice (Indice) -----------------
+% Configuriamo manualmente lo spazio tra numeri e testo
+\makeatletter
+\renewcommand{\l@chapter}{%
+  \@dottedtocline{0}{0em}{2em}} % Spazio tra numero e testo dei capitoli
+\renewcommand{\l@section}{%
+  \@dottedtocline{1}{2em}{2em}} % Spazio tra numero e testo delle sezioni
+\renewcommand{\l@subsection}{%
+  \@dottedtocline{2}{4em}{3em}} % Spazio tra numero e testo delle sottosezioni
+\renewcommand{\l@subsubsection}{%
+  \@dottedtocline{3}{5em}{3em}} % Spazio tra numero e testo delle sotto-sottosezioni
+\makeatother
+
+
+
+
 % ---- Intestazioni e piè di pagina (KOMA) -------------------------
 \usepackage{scrlayer-scrpage}
 \clearpairofpagestyles
 
-% Definizione del font Garamond
-\newfontfamily\garamondfont{Garamond}
+% Numero di pagina centrato in basso
+\cfoot{\thepage} % Numeri di pagina in basso centrati
 
-% Numero di pagina centrato in basso in Garamond
-\cfoot{\garamondfont\thepage} % Numeri di pagina in basso centrati in Garamond
-
-% Intestazioni delle pagine: titolo capitolo in alto in Garamond
-\ihead[\garamondfont\leftmark]{\garamondfont\leftmark} % Titolo capitolo in Garamond
-\ohead{}
+% Intestazioni delle pagine successive ai capitoli
+\ihead{\leftmark} % Titolo capitolo in alto a sinistra (Garamond)
+\ohead{}          % Nessuna intestazione a destra
 
 % Aggiorna l'automark solo per i capitoli (evita conflitti)
 \automark[chapter]{chapter}
 
 % ---- Stile pagina senza intestazione (solo per la prima pagina del capitolo) ----
-\newcommand{\noheadfirstpage}{%
-  \thispagestyle{plain} % Usa lo stile "plain" senza intestazione
-  \renewcommand{\headmark}{} % Rimuove l'intestazione (head)
-}
+\renewcommand{\chapterpagestyle}{plain} % La prima pagina del capitolo è "plain"
 
+% tolleranza per l'overflow delle righe ------------------------------
 
+\setlength{\emergencystretch}{3em}
 
 % ---- Ipertesto & PDF metadata ------------------------------------
 \usepackage{hyperref}
@@ -174,6 +170,25 @@
 }
 
 
+% ---- Pacchetto TikZ per la cornice decorativa ----
+\usepackage{tikz}
+\usepackage{eso-pic} % Per posizionare elementi sulla pagina
+
+% ---- Comando per la Cornice Decorativa ----
+\newcommand{\chapterdecoration}{
+  \AddToShipoutPictureBG*{ % Aggiungi solo alla pagina corrente
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north east] at (current page.north east) {
+        \includegraphics[width=11cm]{./images/greek_corner_NE.png}
+      };
+      \node[anchor=south west] at (current page.south west) {
+        \includegraphics[width=9cm]{./images/greek_corner_SW.png}
+      };
+    \end{tikzpicture}
+  }
+}
+
+
 
 % ---- Per capitoli in subfile -------------------------------------
 \usepackage{subfiles}
@@ -183,11 +198,17 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
+%---- TabularX ------------------------------------
+\usepackage{tabularx}
+
+
+%---- Multicols ------------------------------------
+\usepackage{multicol}
 
 % ------------------------------------------------------------------
 % INIZIO DOCUMENTO
 % ------------------------------------------------------------------
-
+\chapterdecoration
 \title{Zarafir}
 \author{}
 \date{} 
@@ -195,13 +216,16 @@
 \begin{document}
 \frontmatter
 \begin{titlepage}
-  \centering
+  \begin{centering}
   \includegraphics[width=\textwidth]{upscaled_logo}
+  \vspace{0.3cm}
   \includegraphics[width=\textwidth]{upscaled_text}
   {\Huge\bfseries\zarafirtitlefont  Manuale di Gioco di Ruolo\vspace{1cm}\par}
-  %{\Large Vodars\par}
+  
   \vfill
-  {\large Versione \today\par}
+  {\Large Vodars\par}
+  {\large Versione 2025\par}
+  \end{centering}
 \end{titlepage}
 
 \tableofcontents                    
@@ -215,48 +239,94 @@
 
 % ---- Capitoli separati -------------------------------------------
 \chapter{Introduzione}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/introduzione}
 \clearpage
 
 \chapter{Obiettivo del Manuale}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/ambientazione}
 \clearpage
 
 \chapter{Creazione Personaggio}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/creazione_pg}
 \clearpage
 
 \chapter{Bussola Morale}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/bussola_morale}
 \clearpage
 
 \chapter{Punti Vita, Stress Mentale, Esperienza}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/vita_mana}
 \clearpage
 
 \chapter{Conoscenze}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/conoscenze}
 \clearpage
 
 \chapter{Tiro di Simulazione}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/TDS}
 \clearpage
 
 \chapter{Abilità}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/abilita}
 \clearpage
 
 \chapter{Talenti}
-\noheadfirstpage
+\chapterdecoration
 \subfile{sections/talenti}
+\clearpage
+
+\chapter{Oggetti e Tesori}
+\chapterdecoration
+\subfile{sections/oggetti_tesori}
+\clearpage
+
+\chapter{Equipaggiamento}
+\chapterdecoration
+\subfile{sections/equipaggiamento}
+\clearpage
+
+\chapter{Combattimento}
+\chapterdecoration
+\subfile{sections/combattimento}
+\clearpage
+
+\chapter{Magia}
+\chapterdecoration
+\subfile{sections/magie}
+\clearpage
+
+\chapter{Condizioni particolari}
+\chapterdecoration
+\subfile{sections/effetti_stato}
+\clearpage
+
+\chapter{Trappole}
+\chapterdecoration
+\subfile{sections/trappole}
+\clearpage
+
+\chapter{Famigli}
+\chapterdecoration
+\subfile{sections/famigli}
+\clearpage
+
+\chapter{Bestiario}
+\chapterdecoration
+\subfile{sections/bestiario}
+\clearpage
+
+
+\chapter*{Appendice Rapida}
+\addcontentsline{toc}{chapter}{Appendice Rapida}
+\subfile{sections/appendice}
 \clearpage
 
 

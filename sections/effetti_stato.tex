@@ -1,30 +1,137 @@
 \documentclass[../manuale_main.tex]{subfiles}
 
-
-
 \begin{document}
-Questa sezione contiene una serie di condizioni di esempio nelle quali i personaggi potrebbero trovarsi.\\
-Non è una lista esaustiva in quanto vengono considerati principalmente gli status che potrebbero essere inflitti usando le magie presenti in questo manuale. Considerate questi esempi come una guida di riferimento per sapere come calibrare i modificatori e trarre spunto per la gestione di alcune meccaniche condizioni che non sono descritte, come un personaggio affaticato o basso di morale.\\
 
-\subsection{Paura e Terrore} 
-\paragraph{Paura}\mbox{}\\
-Un personaggio impaurito sarà restio a compiere un’azione collegata a ciò che gli ha causato la paura. Per rappresentare questo comportamento, prima di svolgere una di quelle azioni, il personaggio deve fare un TDS su “Forza di volontà”. In caso di fallimento, nello svolgere l’azione ha un modificatore di +2 alla difficoltà. La difficoltà del TDS è decisa dal master.
-\paragraph{Terrore}\mbox{}\\
-Il personaggio è atterrito. È incapace di ragionare e di agire lucidamente. Per rappresentare questo comportamento, all’inizio del suo turno, il personaggio deve fare un TDS su “Forza di volontà”. In caso di fallimento, a discrezione del master, il personaggio tenterà di fuggire da ciò che lo terrorizza oppure salterà il suo turno, rimanendo paralizzato dalla paura. In caso di successo avrà un modificatore di +3 alla difficoltà per ogni azione che vorrà svolgere. La difficoltà del TDS su “Forza di volontà” è decisa dal master.
-\subsection{Svenimento e Addormentamento} 
-\paragraph{Svenimento}\mbox{}\\
-Un personaggio svenuto è completamente inerme e senza possibilità di ribellarsi fino a che non viene fatto rinvenire. Egli è quindi vittima di ogni attacco che gli venga sferrato contro (in questo caso verranno ignorati tutti i bonus dati dalla capacità di “Evitare” del personaggio). Lo svenimento può essere causato dalla perdita di punti vita o mana, da un particolare veleno o un evento troppo traumatico per il personaggio stesso.
-\paragraph{Addormentamento}\mbox{}\\
-Un personaggio addormentato non potrà agire finché non tornerà cosciente; questo può avvenire a causa di fattori esterni (essere colpito da un attacco, la presenza di forti rumori, ecc) o autonomamente. Mentre è addormentato un personaggio è sottoposto alle stesse regole dello svenimento.
-\clearpage
-\subsection{Avvelenamento} 
-Il personaggio è stato avvelenato, dipendentemente dal tipo di veleno si distinguono casistiche differenti.\\
-Verranno mostrati alcuni tipi di veleni di esempio per farvi capire quali possono essere gli effetti sul personaggio.
+
+Nel corso delle loro avventure, i personaggi possono trovarsi in una varietà di condizioni che influenzano le loro capacità fisiche, mentali o emotive. Questa sezione offre una guida per gestire queste condizioni, permettendo al Master di utilizzarle come spunto narrativo e meccanico. Le condizioni qui descritte non sono una lista esaustiva, ma un insieme di esempi per ispirare la gestione degli effetti che possono influenzare i personaggi.
+
+\section{Paura e Terrore}
+
+La paura è un istinto primordiale, una voce nella mente che urla di sopravvivere a ogni costo. Non è un semplice malus numerico, ma una condizione narrativa che colora le decisioni, irrigidisce i muscoli, annebbia la lucidità.
+
+\textbf{Un personaggio impaurito} non è semplicemente meno efficace: esita, osserva i compagni per cercare sicurezza, ha il respiro affannoso e le mani tremanti. Se deve agire contro la fonte della paura (attaccarla, avvicinarsi, affrontarla verbalmente), il Master può chiedere un \textbf{Tiro di Stabilità Mentale} su \textbf{Forza di Volontà} (basata su Sensibilità). La difficoltà dipende dalla natura e dall’intensità della minaccia:
+
 \begin{itemize}
-\item Debole: questo tipo di veleno è molto semplice da produrre ma i suoi effetti non sono letali per l’organismo. Questo veleno infligge 1 danno all’inizio di ogni turno del personaggio (non può essere ridotto). Il danno inflitto in questo modo non può essere letale. Questo veleno dopo breve tempo viene neutralizzato dal corpo della vittima, per questo motivo può infliggere al massimo 5 danni e può essere utilizzato nuovamente sullo stesso bersaglio dopo qualche settimana.
-\item Narcotico: questo tipo di sostanza non ha effetti particolarmente dannosi per il corpo della vittima, ma lo espone a conseguenze potenzialmente letali. Dipendentemente dalla concentrazione e dal modo in cui è stato ottenuto, avrà effetti più o meno importanti. In linea generale i movimenti e le capacità di reazione della vittima saranno rallentati, fino a causarne lo svenimento o la sonnolenza in caso di grossi quantitativi di veleno. 
-\item Letale: dipendentemente dall’ambientazione, questo veleno è considerato letale: una volta somministrato, se non viene utilizzato l’antidoto, la morte è certa. A seconda del tipo di veleno questa può avvenire più o meno velocemente.
+\item la vista di un mostro orrendo potrebbe provocare un’esitazione;
+\item l’improvvisa comparsa di uno spettro nel buio, un autentico terrore.
 \end{itemize}
+
+\begin{itemize}
+\item \textbf{Successo:} il personaggio riesce a gestire la propria paura, ma potrebbe comunque mostrarla: un colpo esitante, uno sguardo distolto, parole più dure del necessario.
+\item \textbf{Fallimento:} l’azione riesce, ma con un \textbf{+2 alla difficoltà}, oppure può essere sostituita da un comportamento istintivo (indietreggiare, proteggere un alleato, restare immobile).
+\end{itemize}
+
+\textbf{Il Terrore} è un'esperienza diversa. Non ci si limita ad avere paura: ci si convince che non ci sia via d’uscita. L’istinto prende il sopravvento, cancellando ogni razionalità.
+
+All’inizio del turno, un personaggio in preda al terrore deve effettuare un nuovo \textbf{Tiro su Forza di Volontà} (Sensibilità).
+
+\begin{itemize}
+\item \textbf{In caso di successo:} il personaggio riesce a controllarsi, ma è ancora scosso: ogni azione avrà un \textbf{+3 alla difficoltà}, e potrebbe comunque mostrare segni di panico.
+\item \textbf{In caso di fallimento:} il Master può scegliere se il personaggio fugge in una direzione sicura o resta paralizzato, completamente in balia degli eventi.
+\end{itemize}
+
+Le creature capaci di generare terrore (come i demoni, gli spiriti o alcuni rituali) possono usare questa condizione come arma. Tuttavia, anche un evento narrativo particolarmente toccante, come vedere morire un alleato in modo brutale, può scatenarla.
+
+\textbf{Nota:} la paura è anche un’occasione narrativa. Può mostrare vulnerabilità, generare coesione, rivelare traumi. Incoraggia i giocatori a interpretarla, invece che a evitarla.
+
+\vspace{0.5cm}
+\noindent
+\begin{center}
+\rule{\textwidth}{0.4pt} 
+\end{center}
+\vspace{0.5cm}
+
+\section{Stress Mentale e Crisi Psicologica}
+
+Ogni avventura mette a dura prova non solo il corpo, ma anche la mente. La vista dell’innaturale, il senso di colpa, l’uso ripetuto di poteri oscuri... tutto lascia un segno invisibile. Questo segno è rappresentato dallo \textbf{Stress Mentale}.
+
+\textbf{Lo Stress Mentale} cresce ogni volta che un personaggio:
+\begin{itemize}
+\item lancia una magia o una stregoneria complessa,
+\item è testimone di eventi traumatici (es. un rituale di sangue, la morte di un alleato),
+\item viene colpito da effetti mentali (illusioni invasive, visioni, maledizioni).
+\end{itemize}
+
+Quando lo Stress Mentale supera la metà della propria soglia massima (pari a \textbf{Intelligenza + Sensibilità}), il personaggio inizia a manifestare segni di \textbf{Affaticamento Mentale}.
+
+\begin{itemize}
+\item \textbf{Sintomi lievi:} difficoltà a concentrarsi, memoria fragile, mani tremanti, sonno disturbato.
+\item \textbf{Effetti suggeriti:} \textbf{+1 alla difficoltà} di tutte le prove legate a Intelligenza o Sensibilità, ma il Master può anche chiedere al giocatore di interpretare comportamenti paranoici o evasivi.
+\end{itemize}
+
+Se lo Stress Mentale raggiunge o supera la soglia, il personaggio subisce una \textbf{Crisi Mentale}.
+
+\begin{itemize}
+\item \textbf{Effetti lievi:} smarrimento momentaneo, confusione, tic nervosi.
+\item \textbf{Effetti medi:} allucinazioni, senso di persecuzione, incapacità a parlare lucidamente.
+\item \textbf{Effetti gravi:} episodi dissociativi, attacchi di panico, confondere compagni e nemici.
+\item \textbf{Effetti estremi:} blackout temporanei, rifiuto della realtà, perdita del linguaggio.
+\end{itemize}
+
+\textbf{Il Master} è libero di determinare l’intensità della crisi in base al tono della scena. Il giocatore può proporre come interpretare la crisi, magari con flashback, manifestazioni di traumi o reazioni impulsive.
+
+\textbf{Recupero:} Lo Stress Mentale si riduce con il tempo, il riposo e la cura. Alcuni luoghi sacri, rituali o momenti di catarsi (narrazioni condivise, riti funebri, confessioni) possono offrire un recupero immediato, parziale o completo.
+
+\textbf{Nota:} In campagne più psicologiche o investigative, il Master può mantenere traccia anche delle crisi passate, creando un “retaggio mentale” che arricchisce la caratterizzazione del personaggio.
+\clearpage
+\section{Svenimento e Addormentamento}
+
+\subsection{Svenimento}
+Lo svenimento è la resa del corpo al trauma: dolore, fatica, paura o colpi particolarmente violenti possono causare questa condizione. Un personaggio svenuto è privo di coscienza, indifeso, come una candela spenta in mezzo al buio.
+
+\begin{itemize}
+\item \textbf{Effetto:} Il personaggio non può agire, né percepire ciò che accade intorno a lui. Non ha diritto a tiri difensivi o tentativi di evitare colpi.
+\item \textbf{Narrativamente:} I compagni possono tentare di soccorrerlo, mentre i nemici possono colpirlo impunemente. Attacchi contro un bersaglio svenuto ignorano ogni bonus difensivo.
+\end{itemize}
+
+Il recupero avviene solo per effetto di cure, magia, o dopo un tempo stabilito dal Master in base alla causa del collasso.
+
+\subsection{Addormentamento}
+Il sonno è una sospensione della coscienza, volontaria o imposta da magia, veleni o stanchezza estrema. Un personaggio addormentato non è meno vulnerabile di uno svenuto, ma la sua condizione può essere interrotta più facilmente.
+
+\begin{itemize}
+\item \textbf{Effetto:} Il personaggio è incosciente e incapace di agire. È considerato come svenuto a tutti gli effetti.
+\item \textbf{Risveglio:} Rumori forti, scosse violente o un attacco diretto lo risvegliano immediatamente, a discrezione del Master.
+\item \textbf{Narrativamente:} Un addormentamento può diventare un ottimo espediente per colpi a sorpresa, imboscate o intrusioni furtive.
+\end{itemize}
+\clearpage
+\section{Avvelenamento}
+
+Il veleno è una delle armi più subdole e spietate. Invisibile, lento, insinuante. Può portare alla morte con una goccia, o compromettere le capacità di un avversario con effetti quasi impercettibili. I veleni non hanno un’unica forma: possono essere estratti, distillati, creati magicamente o segretamente mischiati a cibo e bevande.
+
+\textbf{Meccanica:} Ogni veleno ha una durata, un effetto e un metodo di somministrazione. Il Master è libero di crearne di propri, ma alcuni archetipi sono riportati qui come riferimento.
+
+\subsection{Veleno Debole}
+Una sostanza blanda, spesso creata con ingredienti comuni. Può debilitare, ma raramente uccide.
+
+\begin{itemize}
+\item \textbf{Effetto:} Infligge 1 danno all’inizio di ogni turno. Il danno è puro e non può essere ridotto da armature o resistenze.
+\item \textbf{Durata:} 5 turni.
+\item \textbf{Narrativamente:} utile per spossare bersagli in fuga, compromettere un combattente prima di uno scontro o come avvertimento.
+\end{itemize}
+
+\subsection{Veleno Narcotico}
+Un composto che agisce sul sistema nervoso o mentale. Ne esistono versioni naturali e magiche, e gli effetti possono variare da uno stordimento lieve all’incoscienza profonda.
+
+\begin{itemize}
+\item \textbf{Effetto:} Il personaggio ha un \textbf{+2 alla difficoltà} per ogni azione. In alcuni casi, può causare visioni, allucinazioni o un sonno improvviso.
+\item \textbf{Durata:} A discrezione del Master, solitamente da pochi minuti a qualche ora.
+\item \textbf{Narrativamente:} Perfetto per rapimenti, interrogatori o sabotaggi.
+\end{itemize}
+
+\subsection{Veleno Letale}
+Un veleno progettato per uccidere. Alcuni agiscono rapidamente, altri consumano il corpo lentamente ma inesorabilmente. Alcuni sono di origine alchemica, altri derivano da creature esotiche.
+
+\begin{itemize}
+\item \textbf{Effetto:} Infligge danni progressivi ogni turno: 
+\[
+\textnormal{1D4} \textit{ (turni 1–3)}, \quad \textnormal{1D6} \textit{ (turni 4–6)}, \quad \textnormal{1D8} \textit{ (dal 7° turno in poi)}
+\]
+\item \textbf{Cura:} Solo un antidoto specifico o una magia molto potente può fermare il decorso. In assenza di trattamento, la morte è certa.
+\item \textbf{Narrativamente:} una maledizione avvelenata, il morso di un serpente ultraterreno, o il prezzo per aver tradito una gilda di assassini.
+\end{itemize}
+
+\textbf{Nota per il Master:} I veleni possono essere anche usati per generare tensione narrativa. Un personaggio che ha solo poche ore per cercare un antidoto, o che scopre di essere stato avvelenato da un alleato, vive momenti di grande impatto interpretativo.
 
 
 \end{document}

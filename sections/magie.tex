@@ -1,584 +1,110 @@
 \documentclass[../manuale_main.tex]{subfiles}
 
 
-
 \begin{document}
 
-Questo manuale utilizza un sistema di magia basato su incanti e stregonerie: gli incanti vengono appresi dal personaggio tramite lo studio accademico, per questo motivo non permettono molta libertà nella gestione dell'incanto stesso, ma hanno il vantaggio di offrire molte possibilità se appresi nel loro insieme. 
-Le stregonerie sono utilizzate dal personaggio senza una fase si studio approfondito: egli, avendo una particolare affinità con gli elementi che lo circondano le utilizza nel modo che preferisce. Per rendere al meglio questo tipo di comportamento, sono spiegate solamente delle regole base (per esempio il numero di danni che possono essere inflitti), mentre la descrizione è lasciata in mano al giocatore che potrà adattarle al proprio personaggio nel modo che preferisce, dipendentemente dalla situazione. Sarà il master a stabilire se l'idea del giocatore sia realizzabile e la difficoltà necessaria per farlo.\\
-Trattiamo ora le regole comuni a tutte le magie.\\
+\section{Magia e Stregoneria}
 
+La magia è una forza misteriosa e potente che permea il mondo di Zarafir. I personaggi possono utilizzare la magia in due modi distinti: attraverso \textbf{Incantesimi} e \textbf{Stregonerie}. Questi due approcci alla magia offrono stili diversi di manipolazione delle forze arcane:
 
-\subsection{Magia ed equipaggiamento}
-Per utilizzare una magia il personaggio deve avere la possibilità di stabilire un legame con ciò che lo circonda, ma l'utilizzo di armi o armature può impedire questo collegamento.\\
-Sono riportate le limitazioni al lancio delle magie per le varie categorie di armi, scudi e armature.\\
-Eventuali eccezioni sono specificate dall'oggetto o dalla magia stessa (per esempio, è possibile avere un'armatura che non interferisca con il lancio di magie).
-
-L'unica eccezione sono le magie dell' ``Arte della Fede'' che possono essere usate senza limitazioni date dall'equipaggiamento.
-\renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\linewidth}{l X}
-\textbf{Armi e scudi di ogni tipo}&Non è possibile lanciare magie quando si hanno entrambe le mani impegnate con questo tipo di oggetti.\\
-\textbf{Armature leggere}&Nessuna limitazione o modificatore al lancio delle magie.\\
-\textbf{Armature medie}&Modificatore di +1 alla difficoltà (per ogni oggetto medio equipaggiato) per il lancio di ogni magia.\\
-\textbf{Armature pesanti}&Non è possibile lanciare magie usando armature pesanti. Non è inoltre possibile meditare indossando anche un singolo pezzo di un'armatura pesante.\\
-\end{tabularx}
-
-\subsection{Utilizzare una magia}
-
-Per utilizzare una magia è necessario dichiarare quale incanto o stregoneria si intende utilizzare (nel secondo caso chiarire come la si intende usare) e successivamente fare un TDS utilizzando l'abilità relativa. La difficoltà del TDS è indicata sulla magia che si intende usare.
-
-Non è possibile usare una magia se l'abilità relativa è allo 0 o se non il personaggio non possiede la specializzazione adatta.
-
-Per poter utilizzare una magia è necessario poter pagare il costo in punti mana necessario.\\
-Questo è pari a: “\textbf{ Difficoltà di lancio - (valore dell'abilità “Meditazione” + altri bonus dati da talenti e specializzazioni)}”.\\
-Il costo minimo di una magia è comunque fissato a 1.\\
-Il costo in mana viene pagato sia in caso di successo che di fallimento.
-In caso di successo nel tentativo di lancio della magia si considereranno gli effetti come indicato nella descrizione (per esempio calcolando i danni sui bersagli).
-
-Si ricorda inoltre che si può lanciare solamente una magia al turno e che il lancio di una magia preclude la possibilità di attaccare con un'arma (eventuali eccezioni date da talenti o da una magia particolare sono espressamente indicate).
-
-\clearpage
-
-
-\subsubsection{Quando utilizzare una magia}
-Una magia può essere utilizzata da un personaggio solamente all'interno del suo turno.
-Sono presenti due eccezioni:
 \begin{itemize}
-\item Protezione (Arte della sapienza - Quinto cerchio): in questo caso la magia deve essere utilizzata prima di un colpo andato a segno da parte di un nemico (ma prima del calcolo dei danni).
-\item Annullamento (Stregoneria): in questo caso la stregoneria viene utilizzata dopo il lancio (riuscito) di una magia da parte di un nemico (ma prima del calcolo di eventuali danni).
+    \item \textbf{Incantesimi:} Sono formule magiche apprese e studiate, organizzate in scuole specifiche (Sapienza, Fede e Morte). Gli incantesimi offrono effetti precisi e prevedibili, ma richiedono preparazione e concentrazione.
+    \item \textbf{Stregonerie:} Sono manifestazioni spontanee di potere, influenzate dalla volontà e dall'immaginazione del personaggio. Le stregonerie sono più flessibili, permettendo una grande varietà di effetti, ma richiedono un maggiore controllo mentale.
 \end{itemize}
-In entrambi i casi l'utilizzatore salterà il suo prossimo turno.
 
-\subsection{Durata della magia}
-La durata di una magia può essere istantanea o protrarsi nel tempo: nel primo caso gli effetti terminano immediatamente dopo l'esecuzione della magia, mentre nel secondo restano attivi per la durata indicata. Il personaggio che ha lanciato la magia ha comunque la possibilità di terminarli anzitempo.
+La magia in Zarafir non utilizza Punti Mana, ma è direttamente legata allo \textbf{Stress Mentale}. Ogni volta che un personaggio lancia una magia, accumula Stress Mentale pari alla \textbf{difficoltà di lancio della magia}. Questo rappresenta la pressione psicologica e la fatica mentale di manipolare forze arcane. Anche in caso di fallimento nel lancio della magia, lo Stress Mentale viene accumulato.
 
+\subsection{Utilizzare una Magia}
+Per utilizzare una magia (sia essa un incantesimo o una stregoneria), il personaggio deve dichiarare quale magia desidera lanciare e fare un Tiro di Simulazione (TDS) per verificare il successo. 
 
-\subsection{Danno della magia}
-Il danno che viene indicato nella descrizione può essere ridotto da eventuali protezioni o dalla propria capacità di resistere alla magia a meno che non sia indicato diversamente.
+\begin{itemize}
+    \item \textbf{Dichiarazione del Lancio:} Il giocatore dichiara la magia che il suo personaggio vuole lanciare. Se si tratta di una Stregoneria, specifica anche l'effetto desiderato.
+    \item \textbf{Esecuzione del TDS:} Il giocatore esegue un TDS basato sulla propria abilità magica (come Tessimagie per gli Incantesimi, Stregoneria di Attacco per le Stregonerie offensive, ecc.). La difficoltà del TDS è determinata dal livello della magia.
+    \item \textbf{Accumulo di Stress Mentale:} Indipendentemente dal risultato del TDS (successo o fallimento), il personaggio accumula Stress Mentale pari alla difficoltà della magia.
+\end{itemize}
 
-Le magie vengono indirizzate contro la zona meno protetta del bersaglio. Il danno verrà quindi ridotto dall'armatura che offre la minor protezione tra Testa, Busto, Braccia o Gambe. Se una di queste zone non fosse protetta dall'armatura, il danno non verrà ridotto.\\
-A discrezione del master, la magia potrebbe danneggiare l'armatura (Esempio: Una palla di fuoco che impatta contro una protezione in cuoio).
+\subsubsection{Esempio di Utilizzo di una Magia}
+Un mago decide di lanciare l'incantesimo \textit{Palla di Fuoco} (difficoltà 4). Ha l'abilità \textbf{Tessimagie} al 5 e \textbf{Intelligenza} a 12.
 
-Il danno subito da una magia può essere ulteriormente ridotto dalla capacità di resistere alla magia.
+\begin{itemize}
+    \item Il giocatore tira 3D6 e ottiene un risultato totale di 10.
+    \item La difficoltà è 4, quindi il risultato necessario è: 
+    \[
+    12 [\emph{Intelligenza}] + 5 [\emph{Tessimagie}] - 4 [\emph{Difficoltà}] = 13
+    \]
+    \item 10 è inferiore a 13, quindi l'incantesimo ha successo. La \textbf{Palla di Fuoco} viene lanciata, infliggendo i danni indicati.
+    \item Il mago accumula 4 punti di \textbf{Stress Mentale}, pari alla difficoltà dell'incantesimo.
+\end{itemize}
 
+\subsection{Resistere a una Magia}
+Quando un personaggio viene colpito da una magia ostile, può tentare di resistere utilizzando la sua abilità \textbf{Resistenza Magica} (basata su \textbf{Sensibilità}). Il processo per resistere a una magia segue questi passaggi:
 
-\subsubsection{Resistere a una magia}
-Quando si viene colpiti da una magia si ha la possibilità di provare a resistervi. In entrambi i casi si utilizza l'abilità ``\emph{Resistenza magica}'' ma il funzionamento differisce in base ai casi:
-\paragraph{\textbf{Magia offensiva}}: Se un personaggio viene colpito da una magia che infligge danni al bersaglio, questi può provare a resistervi. Per farlo è necessario superare un TDS sull'abilità ``\emph{Resistenza magica}''. Il valore di difficoltà del TDS è pari alla difficoltà di lancio della magia. In caso di successo il danno verrà ridotto di 1D6 + modificatori. La specializzazione \emph{Magie offensive} dell'abilità, permette di diminuire i danni di -1 (o -2) anche in caso di fallimento).
-\paragraph{\textbf{Magie non offensive}}: Se una magia è indirizzata verso il personaggio, ma i suoi effetti non sono mirati a infliggere danno direttamente (Esempio: modificatori negativi alle statistiche, effetti di stato, illusioni o manipolazione delle emozioni), questi può provare a resistervi. Per farlo è necessario superare un TDS sull’abilità ``\emph{Resistenza magica}''. Il valore di difficoltà del TDS è pari alla difficoltà di lancio della magia. In caso di successo, tira 1D6.
+\begin{itemize}
+    \item \textbf{Esecuzione del TDS:} Il personaggio bersaglio esegue un TDS utilizzando \textbf{Resistenza Magica}. La difficoltà è pari al valore dell'abilità magica dell'incantatore.
+    \item \textbf{Accumulo di Stress Mentale:} Se il personaggio resiste con successo, accumula Stress Mentale pari alla metà della difficoltà di lancio (arrotondato per difetto). Se fallisce, non accumula Stress aggiuntivo.
+    \item \textbf{Effetti della Resistenza:}
+    \begin{itemize}
+        \item \textbf{Magie Offensive:} Se la resistenza ha successo, i danni della magia vengono ridotti di un valore pari a quello dell'effetto della magia (ad esempio, resistere a una \textit{Palla di Fuoco} riduce il danno di 2D6).
+        \item \textbf{Magie Non Offensive:} Il Master stabilisce gli effetti di una resistenza riuscita, che possono variare da una riduzione della durata a un annullamento parziale degli effetti.
+    \end{itemize}
+\end{itemize}
 
-\begin{tabularx}{\linewidth}{c l X}
-1&\textbf{Nessuna resistenza}&Il personaggio ha offerto una bassa resistenza alla magia e ne subisce gli effetti completamente. Chi ha lanciato la magia spende 1 punto mana addizionale.\\
-2&\textbf{Resistenza ridotta}&Il personaggio riduce la durata degli effetti di 1 round.\\
-3&\textbf{Resistenza ridotta}&Il personaggio riduce la durata degli effetti di 1 round.\\
-4&\textbf{Resistenza media}&Il personaggio riduce la durata degli effetti di 2 round.\\
-5&\textbf{Resistenza alta}&Il personaggio riduce la durata degli effetti di 2 round. Chi ha lanciato la magia spende 1 punto mana addizionale.\\
-6&\textbf{Resistenza completa}&Il personaggio ha resistito completamente alla magia, ignorandone gli effetti.\\
-\end{tabularx}
+\subsubsection{Esempio di Resistenza a una Magia}
+Un personaggio viene colpito da una \textit{Palla di Fuoco} lanciata da un mago (difficoltà 4). Il personaggio ha \textbf{Resistenza Magica} al 3 e \textbf{Sensibilità} a 10.
+
+\begin{itemize}
+    \item Il giocatore tira 3D6 e ottiene un risultato di 8.
+    \item La difficoltà è 4 (abilità del mago), quindi il risultato necessario è:
+    \[
+    10 [\emph{Sensibilità}] + 3 [\emph{Resistenza Magica}] - 4 = 9
+    \]
+    \item 8 è inferiore a 9, quindi la resistenza ha successo.
+    \item Il personaggio accumula 2 punti di \textbf{Stress Mentale} (la metà della difficoltà della magia, arrotondata per difetto).
+    \item I danni della \textit{Palla di Fuoco} vengono ridotti di 2D6 (come indicato nella descrizione della magia).
+\end{itemize}
+
+\subsection{Durata delle Magie}
+Le magie possono avere una durata istantanea o prolungata nel tempo. 
+
+\begin{itemize}
+    \item \textbf{Magie Istantanee:} Hanno effetto immediato e terminano subito dopo l'attivazione (es. \textit{Palla di Fuoco}).
+    \item \textbf{Magie a Durata Prolungata:} Restano attive per un numero di round o minuti indicato nella descrizione della magia. 
+\end{itemize}
+
+\subsection{Magia e Equipaggiamento}
+Lanciare magie richiede una certa libertà di movimento e concentrazione. L'uso di armature e armi può influenzare la capacità di lanciare incantesimi:
+
+\begin{itemize}
+    \item \textbf{Armi e Scudi:} Non è possibile lanciare magie se entrambe le mani sono impegnate.
+    \item \textbf{Armature Leggere:} Nessuna penalità al lancio di magie.
+    \item \textbf{Armature Medie:} Modificatore di +1 alla difficoltà per ogni pezzo di armatura media indossato.
+    \item \textbf{Armature Pesanti:} Non è possibile lanciare magie indossando armature pesanti.
+\end{itemize}
+
 
 \subsection{Gli incanti}
 Come già accennato prima, gli incanti sono le magie imparate dai personaggi in modo accademico e rigoroso.
 Sono divise in 3 rami ``Sapienza'', ``Fede'' e ``Morte' che possono essere ricondotti alle magie delle tre classi iconiche ``Mago'', ``Paladino'' e ``Necromante'' presenti in altri manuali di gioco di ruolo.\\
-Non è necessario per un personaggio conoscere solamente gli incanti di uno dei 3 rami, gestendo opportunamente le specializzazioni è possibile spaziare tra essi, ovviamente rinunciando alle magie più avanzate di ogni ramo.\\
 Ogni ramo presenta un numero differente di incanti, raggruppati in \emph{cerchi} di ordine crescente. I cerchi di livello più basso contengono le magie più semplici del ramo (ma non per questo inutili in fasi di gioco avanzate); i cerchi di livello più alto racchiudono le magie più difficili ma con effetti molto più incisivi.
 
 
 
 \subsubsection{Apprendere un nuovo incanto}
 Per apprendere un nuovo incanto è necessario aver eseguito un'azione specifica (per esempio lo studio dello stesso grazie a una pergamena) dipendente dall'ambientazione.
-Le magie sono utilizzabili solamente avendo soddisfatto il requisito relativo alla specializzazione e all'apprendimento.
 
+Dipendentemente dall'ambientazione, potrebbe essere possibile per un personaggio apprendere incanti di più di un ramo.
 %arte della sapienza
 \clearpage
-\subsubsection{Lista degli incanti - Arte della sapienza}
-\paragraph{Primo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Dardo magico} & 2 & Istantaneo & 15 metri & Il personaggio lancia un dardo magico che impattando con il bersaglio infligge 1D6 danni. \\ \hline
-\textit{Indebolimento} &1  &2 Round  & 15 metri  & Il bersaglio ha un modificatore di +1 al danno subito da ogni attacco non magico. Inoltre, ha un modificatore di -1 al danno inflitto per ogni attacco non magico.  \\ \hline
-\textit{Luce} & 1 & Un'ora & 5 metri & Permette di far risplendere un oggetto in modo che emani la stessa quantità di luce di una torcia. \\ \hline
-\textit{Visione notturna} &2  & Un'ora & 5 metri &  Il personaggio  incanta un alleato che guadagna la possibilità di cogliere anche la minima quantità di luce. Sarà quindi in grado di vedere nelle tenebre, ma in presenza di una forte luce rimarrà abbagliato.\\ \hline
-\textit{Vestizione magica} & 2 & Un'ora & 7 metri & Il personaggio trasforma i vestiti di un bersaglio a proprio piacimento. Il volume dei vestiti non può variare.\\
-\hline
-\end{tabularx}
-\clearpage
-\paragraph{Secondo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Ritarda veleno} & 3 & Istantaneo &Contatto & Ritarda gli effetti causati dal veleno su un bersaglio di circa un’ora. \\ \hline
-\textit{Scassinamento magico} &4  &Istantaneo  & 1 metro  &Apre una serratura non troppo complessa da scassinare. Possono essere aperte le serrature che potrebbero essere scassinate con difficoltà pari o inferiore a 4 usando l'abilità ``\emph{Malaffare}''. \\ \hline
-\textit{Visione del vero} & 2 & 20 minuti & Sè stesso & Il personaggio migliora le sue capacità di distinguere ciò che è reale da ciò che è illusorio. Il personaggio inoltre ottiene un modificatore di -2 alla difficoltà sui TDS basati su ``\emph{Resistenza magica}'' quando prova a resistere a una magia non offensiva.  \\ \hline
-\textit{Silenzio} &3  & Un'ora & Sè stesso & Annulla ogni rumore nel raggio di 6 metri dal personaggio, impedendo anche di lanciare alcune magie.\\ \hline
-\textit{Fulmini a catena} & 3 & Istantaneo & Sè stesso & Il personaggio scaglia una catena di fulmini che colpiscono tutti coloro che si trovano nel suo raggio visivo del personaggio ed entro 20 metri. Ogni bersaglio subisce 1D6 danni. I danni su ogni bersaglio sono aumentati di 1 per ogni pezzo di armatura in metallo che egli indossa. Il danno non può essere ridotto dall'armatura.\\
-\hline
-\end{tabularx}
+\subfile{lista_sapienza}
 
 \clearpage
-\paragraph{Terzo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Cura} & 3 & Istantaneo & Contatto & Restituisce 1D6 punti vita a un bersaglio. Eventuali mutilazioni/ferite non possono essere curate con questo incanto. \\ \hline
-\textit{Essere apolide} &3  &20 minuti  & Sè stesso  &Il mago può parlare qualsiasi lingua, al costo di 2 di punti mana addizionali sarà capace anche di comprendere qualsiasi lingua. \\ \hline
-\textit{Palla di fuoco} & 4 & Istantaneo & 30 metri & Infligge 2D6 danni a un bersaglio.  \\ \hline
-\textit{Tuono} &5  & Istantaneo & Sè stesso & Spaventa tutti i nemici entro 20 metri dal mago con un punteggio di ``\emph{Sensibità}” pari o inferiore a 7. Aumentando la difficoltà di 4 si possono spaventare i nemici con ``\emph{Sensibità}” pari o inferiore a 11. \\ \hline
-\textit{Evoca segugio} & 3 & 10 minuti & 1 metro & Il personaggio evoca un \emph{Segugio magico} con il quale può comunicare mentalmente.\\
-\hline
-\end{tabularx}
-
-
-\paragraph{Quarto cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Anatema} & 5 & 2 & 10 metri &Ogni azione del bersaglio ha un modificatore +2 in difficoltà.  \\ \hline
-\textit{Soffio del drago} &6  &Istantaneo  & Sè stesso  &Infligge 2D6 -2 danni a ogni bersaglio davanti al personaggio in un raggio di 2 metri. Se viene colpito un solo bersaglio, questi subirà invece 2D6 danni. Il danno non può essere ridotto dall'armatura. \\ \hline
-\textit{Rafforzare} & 5 & D3 round & 10 metri &L’alleato bersaglio infligge +2 danni per ogni attacco non magico e subisce -1 danni da ogni attacco non magico.  \\ \hline
-\textit{Sonno} & 6  & Istantaneo & 7 metri & Addormenta un bersaglio. Questi può provare a resistere alla magia con difficoltà base pari a 4. Se riesce a farlo ignora gli effetti di questo incanto e ne sarà immune per le prossime 2 ore.\\ \hline
-\textit{Clone magico} & X & 3*X minuti & 1 metro & Il personaggio evoca un proprio clone: può vedere con i suoi occhi e agire tramite esso. Il clone non può combattere o lanciare magie. Il clone possiede le stesse abilità e caratteristiche del personaggio, ma ha un solo punto vita. Non può essere rivelato come illusione.\\
-\hline
-\end{tabularx}
+\subfile{lista_fede}
 
 \clearpage
-
-\paragraph{Quinto cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Protezione} & 8 & 1 turno & 20 metri &Questo incanto deve essere lanciato immediatamente dopo che gli attacchi sono stati dichiarati (quindi prima di verificare se i colpi siano andati a segno). Protegge il mago e i suoi alleati entro la gittata da tutti i danni.  \\ \hline
-\textit{Rigenerare} & 9 &Istantaneo  & Contatto  & Restituisce tutti i punti vita a un bersaglio. Rigenera inoltre ogni ferita o mutilazione recente. Non è possibile curare una malattia o rimuovere un veleno. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
-\textit{Rivelare intenzioni} & 8 & 20 minuti & Sè stesso &Il personaggio ha la possibilità di rivelare ogni menzogna che gli verrà detta. In alcuni casi potrà anche conoscere la realtà che gli è stata celata.  \\ \hline
-\textit{Schianto elementale} & 10  & Istantaneo & 50 metri &Infligge 3D6 danni a un singolo bersaglio. Il danno può essere ridotto dalla resistenza magica. Il danno non viene ridotto dall'armatura.\\ \hline
-\textit{Recupero magico} & 7 & Istantaneo & Sè stesso & L'incantatore recupera 2D6 punti mana.Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\
-\hline
-\end{tabularx}
+\subfile{lista_morte}
 
 \clearpage
+\subfile{lista_stregonerie}
 
-\paragraph{Sesto cerchio}\mbox{}\\
-
-Le magie del Sesto cerchio sono estremamente potenti: stancano notevolmente chi la utilizza, per questa ragione non possono essere usate più di una volta al giorno (è necessario che il personaggio si riposi adeguatamente).
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Blocca tempo} & 11 & 2 round & 20 metri &Il tempo viene fermato per tutti tranne che per l'incantatore e altri 4 alleati (o meno) entro la gittata. L'incantatore non può attaccare o lanciare altre magie fintanto che questo incanto è attivo, mentre gli alleati potranno agire liberamente. I soggetti resi immobili non possono compiere azioni o schivare attacchi (la difficoltà base per colpirli è pari a 0). Terminato l'effetto, l'incantatore rimane estremamente affaticato. Ha un +2 in difficoltà per ogni TDS basato su Intelligenza fino a che non si riposa.  \\  \hline
-\textit{Evoca demone} & 10 & 4 round & 10 metri &L'incantatore evoca un \emph{Demone} alleato che combatte per lui.  \\ \hline
-\textit{Pioggia di meteore} & 10  & Istantaneo & 300 metri &Questo incanto fa precipitare uno sciame di meteore in un'area di 70 metri di diametro entro la gittata. Ogni personaggio nell'area deve fare un TDS su ``\emph{Acrobazia}'' o ``\emph{Schivare}'' a difficoltà 5. In caso di successo il personaggio subisce 1D6 danni, altrimenti subisce 4D6 danni. Il danno non può essere ridotto dalla resistenza magica o dall'armatura.\\ \hline
-\textit{Posizionamento rapido} & 8 & Istantaneo & 25 metri & L'incantatore si riposiziona in un punto a sua scelta entro la gittata dell'incanto.\\\hline
-\textit{Profezia} & 8 &Istantaneo  & Sè stesso  & L'incantatore canalizza la propria energia per avere una breve visione del futuro. Il giocatore può porre una domanda \emph{dicotomica}* al master a cui dovrà rispondere sinceramente. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\
-\hline
-\end{tabularx}
-*\emph{domanda dicotomica: che prevede solo sì e no come risposta}
-
-%arte della fede
-\clearpage
-\subsubsection{Lista degli incanti - Arte della fede}
-
-
-\paragraph{Primo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Benedizione} & 3 & 2 round & Sè stesso &L'incantatore guadagna +1 Forza e ha un modificatore di -1 al danno subito da ogni attacco. Questo incanto può essere usato nello stesso turno in cui si attacca con un'arma. \\ \hline
-\textit{Favore degli dei} & 2 &Istantaneo  & Contatto  & Restituisce 1D6 punti vita ad un bersaglio di un allineamento concorde a quello dell'incantatore.\\ \hline
-\textit{Punizione} & 3 & Istantaneo & 7 metri &Infligge D8 danni a un bersaglio di allineamento discorde a quello dell'incantatore. \\ 
-\hline
-\end{tabularx}
-
-\paragraph{Secondo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Luce accecante} & 5 & Istantaneo & Sè stesso & Quando questo incanto viene lanciato ogni nemico entro 2 metri dall'incantatore con Reattività pari o inferiore a 9 tira un dado: con un risultato pari o superiore a 5 è accecato e salta il suo prossimo turno. \\ \hline
-\textit{Respingere i nonmorti} & 3 &Istantaneo  & 20 metri  & Infligge 2D6 danni a un bersaglio nonmorto. Il danno non può essere ridotto dall'armatura.\\ \hline
-\textit{Purificazione} & 3 & Istantaneo & Contatto &Rimuove completamente il veleno da un bersaglio. L'incantatore subisce danni pari a: 1D3 in caso di veleno debole, 1D6 in caso di veleno letale. \\ 
-\hline
-\end{tabularx}
-
-\clearpage
-
-\paragraph{Terzo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Arma consacrata} & 5 & 2 round & Sè stesso & L'incantatore benedice la sua arma ottenendo un modificatore di ai +1 danni e -1 alla difficoltà per ogni attacco. Questo incanto può essere usato nello stesso turno in cui si attacca con un'arma. \\ \hline
-\textit{Chiamata alla gloria} & 4 & 2 round  & 3 metri  & L'incantatore e tutti i suoi alleati (entro 3 metri) potranno ignorare ogni tipo di paura e terrore.\\ \hline
-\textit{Guarigione} & 6 & Istantaneo & Contatto & Restituisce 2D6 ferite a un bersaglio di allineamento concorde a quello dell'incantatore. Aumentando la difficoltà di 3 sarà inoltre possibile guarire cicatrici/ossa rotte/mutilazioni. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ 
-\hline
-\end{tabularx}
-
-\paragraph{Quarto cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Furia divina} & 8 & 2 round & Sè stesso & L'incantatoreottiene un modificatore di +2 a tutte le statistiche e un modificatore -1 danni subiti da ogni attacco. Ogni nemico presente in un raggio di 15 metri cambia il proprio bersagliocon l'incantatore stesso. Questo incanto può essere usato nello stesso turno in cui si attacca con un'arma. \\ \hline
-\textit{Luce sacra} & 6 & Istantaneo  & 7 metri  & Infligge D10 danni a ogni nemico nelle vicinanze. Aumentando la difficoltà di 4 l'incantatore infliggerà invece 10 danni che non potranno essere ridotti dall'armatura.\\ \hline
-\textit{Sacrificio} & 5 & Istantaneo & 5 metri & L'incantatore subisce i danni al posto di un alleato bersaglio; il danno viene calcolato in base all'armatura dell'alleato. Questo incanto non può impedire di essere disarmati. Questo incanto deve essere utilizzato immediatamente prima del conto dei danni.\\ 
-\hline
-\end{tabularx}
-
-
-\clearpage
-
-
-\paragraph{Quinto cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Assalto implacabile} & 9 & Istantaneo & Sè stesso & L'incantatore diventa immune a ogni tipo di paura/ terrore o fatica, le difficoltà relative a ogni TDSper colpire con l'arma sono dimezzate. La sua arma inoltre un modificatore di +3 danni. L'incantatore può mantenere questo effetto attivo spendendo 4 punti vita ogni round dopo il primo. Se questo costo dovesse far svenire o morire l'utilizzatore l'incanto non potrà essere prolungato. \\ \hline
-\textit{Grazia divina} & 8 & Istantaneo  & Contatto  &  L'incantatore riporta in vita un personaggio o creatura bersaglio a patto di abbassare il massimale dei propri punti mana di 2. Colui che è stato riportato in vita abbasserà il massimale dei propri punti mana di 3 e il suo allineamento sarà cambiato con quello di chi ha compiuto il rito. Per eseguire questo incanto è necessario avere il corpo intero di colui che dovrà essere rianimato. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
-\textit{Redivivo} & 10 & 3 round & Sè stesso & Per la durata l'incantatore può ignorare tutti gli effetti causati dalla perdita di punti vita (tra cui dolore, mutilazioni o la morte); se necessario continuerà ad agire come spettro pur di portare avanti la sua causa. Al termine del terzo round tutti gli effetti verranno considerati normalmente.\\ 
-\hline
-\end{tabularx}
-
-%arte della morte
-\clearpage
-\subsubsection{Lista degli incanti - Arte della morte}
-
-\paragraph{Primo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Avvelenare} & 2 & Istantaneo & 2 metri &Avvelena un bersaglio con un veleno debole.  \\ \hline
-\textit{Bomba necrotica} & 3 &Istantaneo  & 10 metri  & L'incantatore causa una piccola esplosione che infligge 1D3 danni a tutti i presenti in un'area di 2 metri di diametro. Se utilizzata in un’area in cui è presente un singolo bersaglio infligge invece 1D6 danni. I danni di questo incanto ignorano l'armatura.\\ \hline
-\textit{Dolore} & 2 & 3 round & Sè stesso & Infligge 3 danni a un bersaglio con costituzione pari o inferiore a 10. al termine dell'incanto il bersaglio recupera i punti vita persi in questo modo. I danni non possono essere ridotti dall'armatura e dalla resistenza magica. Non può essere utilizzato su un bersaglio già danneggiato da “\emph{Dolore}”.  \\ \hline
-\textit{Arte rigenerativa} & 2  & Istantaneo & Contatto &Restituisce 1D3 punti vita a un bersaglio, rigenerando debolmente i tessuti (non permette di rigenerare ferite profonde o già cicatrizzate).\\ \hline
-\textit{Conoscenza della morte} & 2 & 20 minuti & Sè stesso & L'incantatore è in grado di capire la causa del decesso di un soggetto vedendone un frammento dello scheletro. \\
-\hline
-\end{tabularx}
-
-
-\clearpage
-
-
-\paragraph{Secondo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Armatura di nebbia} & 3 & 2 round & 5 metri &Un bersaglio viene protetto su tutto il corpo da un sottile strato di nebbia. Questo gli conferisce un modificatore di +1 in \emph{evasione} contro le armi da mischia e un +2 in \emph{evasione} contro le armi a distanza. \\ \hline
-\textit{Rituale} & 0 &Istantaneo  & Sè stesso  & Come prezzo per eseguire il rito, l'incantatore deve sacrificare una creatura animale o antropomorfa; l'ìincantatore recupera tanti punti vita o mana quanti sono i punti vita massimi del vivente sacrificato. Terminato il rito, il corpo utilizzato diventa polvere. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
-\textit{Spirito vendicativo} & 4 & 3 round & 1 metro & L'incantatore evoca uno “\emph{Spirito Vendicativo}” suo alleato che combatte per lui. \\ \hline
-\textit{Storpia} & 5  & 2 round & 10 metri &L'incantatore danneggia le articolazioni delle gambe (o zampe) di un bersaglio, rallentandone notevolmente i movimenti. Il bersaglio non può correre e ha un -1 in \emph{evasione} per la durata. \\ \hline
-\textit{Maledizione} & 4 & 4 round & 15 metri & L'incantatore investe di energia magica un bersaglio, che deve superare un TDS su ``\emph{Resistenza magica}'' con difficoltà 4. In caso di fallimento l'abilità ``\emph{Resistenza magica}'' del bersaglio avrà valore dimezzato fino al termine dell'incanto.\\
-\hline
-\end{tabularx}
-
-
-\clearpage
-
-
-\paragraph{Terzo cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Finta morte} & 5 & Un'ora & Sè stesso & L'incantatore è in grado di fingere la propria morte. Per la durata dell'incantesimo l'incantatore sembrerà morto e non avrà segni vitali di alcun tipo. Terminato l'incantesimo egli si risveglierà senza conseguenze causate dallo stato di morte apparente. Il personaggio inoltre recupera punti mana come se avesse meditato per la durata dell'incanto.La mente dell'incantatore si trova in una condizione di incoscienza quindi non è possibile terminare l'incanto prima della durata. In questo stato l'incantatore risulta completamente vulnerabile.\\ \hline
-\textit{Parlare con i morti} & 7 &Istantaneo  & Sè stesso  & Questa incanto permette all'incantatore di parlare con gli spiriti dei morti. In presenza del corpo di un soggetto (morto di recente) potrà vederne lo spirito e comunicare con lui. Lo spirito sarà in grado di rivelare informazioni relative agli istanti precedenti alla sua morte ma sarà permeato dalle emozioni provate in quei momenti. \\ \hline
-\textit{Visione terrificante} & 6 & 2 round & 10 metri &Questa incanto combina la necromanzia con le illusioni: l'incantatore mostra a un bersaglio le immagini relative a una sua grande paura, al fine di terrorizzarlo e renderlo inoffensivo. Il bersaglio, durante un combattimento, prima di eseguire ogni azione tira un D6. Con risultato pari o superiore a 5 salterà il proprio turno. \\ \hline
-\textit{Volto dell'amore} & 6  & 4 round & Contatto &Questa incanto combina la necromanzia con le illusioni: l'incantatore risveglia un cadavere, rendendolo privo di connotati; chiunque, guardandolo, lo vedrà come se si trattasse di una persona a lui cara.  Terminato il rito, il corpo utilizzato diventa polvere. \\ \hline
-\textit{Teschio di morte} & 7 & Istantaneo & 20 metri & Uno spettrale teschio d’ombra erompe tra le mani dell'incantatore e si muove molto velocemente fino a 20 metri di distanza in linea retta. Ogni creatura (giocatore o mostro) che si trova sulla traiettoria del teschio subisce 2D6 danni, il danno è calcolato una sola volta e applicato a tutti i bersagli.
-I danni non possono essere ridotti dall'armatura e dalla resistenza magica.
- \\
-\hline
-\end{tabularx}
-
-\paragraph{Quarto cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Animare i morti} & 10 & Istantaneo & Contatto & Questa incanto permette di riportare in vita un vivente. Il teschio del bersaglio deve essere integro, mentre il resto del corpopuò essere rigenerato dall’incanto stesso.  Il bersaglio riportato in vita in questo modo, perde 1 punto in ogni caratteristica rispetto al valore che aveva prima di morire (il minimo per ogni statistica è fissato a 4).
-\\ \hline
-\textit{Gli occhi del defunto} & 9 &Istantaneo  & 10 kilometri  & L'incantatore ha la possibilità di vedere con gli occhi del teschio di una sua vittima se si trova entro la gittata della magia. Il teschio deve essere sufficientemente intatto per eseguire questo rituale. Dopo un'ora il collegamento cade e il teschio brucia in una fiamma verde.\\ \hline
-\textit{Gabbia di sangue} & 9 & 2 round & 10 metri &L'incantatore utilizza il sangue di un corpo morto di recente vicino a lui per intrappolare un bersaglio in una gabbia di sangue. Il bersaglio non può spostarsi, ha un modificatore di +2 alla difficoltà per tutte le azioni che gli richiedono di muoversi (come usare un'arma); inoltre subisce D6-1 danni ogni turno. I danni non possono essere ridotti dall'armatura.\\ \hline
-\textit{La mente è superiore al corpo} & 0  & Istantaneo & Sè stesso &L'incantatore abbassa di 1 punto le caratteristiche: ``\emph{Forza}'', ``\emph{Agilità}'', ``\emph{Costituzione}'' e ``\emph{Reattività}'' per guadagnare1 punto in ``\emph{Intelligenza}'' e ``\emph{Sensibilità}''. Questo effetto è irreversibile e permanente;questo incanto non può essere usato se una delle caratteristiche dovesse arrivare a un valore inferiore a 4. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
-\textit{Infettare} & 5 & Istantaneo & Contatto &L'incantatore corrompe il sangue di un bersaglio, infettandolo. Se il bersaglio non viene curato nelle ore successive all'infezione, la malattia degenera condannandolo a morte certa. 
- \\
-\hline
-\end{tabularx}
-
-
-\clearpage
-
-\paragraph{Quinto cerchio}\mbox{}\\
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\textbf{Nome} & \textbf{Difficoltà} & \textbf{Durata} & \textbf{Gittata} & \textbf{Descrizione} \\ \hline\hline
-\textit{Notte maledetta} & 9 & 3 round & Sè stesso &Un'area enorme (1 kilometro di raggio) attorno all'incantatore precipita nel buio. Tutti coloro che si trovano nell'area vedono come se fosse notte (anche se dotati della capacità di vedere al buio); le evocazioni dell'incantatore hanno un modificatore di +2 al danno con ogni attacco.
-\\ \hline
-\textit{Scheletro di spine} & 9 &Istantaneo  & 20 metri  &Questo incanto ha difficoltà aumentata di 3 se il bersaglio almeno 15 in \emph{Costituzione}. Le ossa del bersaglio si deformano, coprendosi di spine rivolte in ogni direzione. Infligge 3D6 danni che non possono essere ridotti dall'armatura e dalla resistenza magica. Se il danno è fatale, le ossa si ``spogliano'' della carne, diventando uno \emph{Scheletro} al servizio dell'utilizzatore dell’incanto fino a un massimo di 4 ore.\\ \hline
-\textit{Reliquia} & 0 & Istantaneo & Contatto &L'incantatore estrae il cuore dal corpo di una creatura senziente (poco dopo la morte) e sigilla al suo interno l'anima. Il cuore diventa così una \emph{Reliquia}. Terminato il rito, il corpo utilizzato diventa polvere. Questo incanto si può utilizzare solo in una condizione di concentrazione massima.\\ \hline
-\textit{Sia fatta la mia volontà} & 10 & Per sempre & 2 metri & Dopo aver lanciato l'incanto, l'utilizzatore fa una prova contrapposta tra la sua abilità ``\emph{Tessimagie}''  e l'abilità ``\emph{Resistenza magica}'' del bersaglio; quest'ultimo ha un modificatore di -2 sul risultato. Se il bersaglio perde la sua mente cade sotto il controllo di chi ha lanciato l'incanto, altrimenti resiste e diventa immune a ogni altro tentativo di controllo da parte dell'incantatore. Non è possibile utilizzare questo incanto su creature che abbiano un valore di ``\emph{Sensibilità}'' pari o superiore a 15. La creatura controllata si comporta come un'evocazione.\\
-\hline
-\textit{Evocazione blasfema} & 10  & Istantaneo & 10 metri &Per lanciare questa magia il personaggio deve sacrificare una \emph{Reliquia}: richiama una creatura da un mondo lontano. La creatura così evocata può combattere per il lui fino a un massimo di 6 round. Al momento dell'evocazione lancia un 1D6: il risultato stabilirà quale sia la creatura richiamata (sono indicate nel paragrafo successivo).  \\ \hline
-\end{tabularx}
-
-\clearpage
-
-\paragraph{Le reliquie}\mbox{}\\
-La reliquia può essere ottenuta dal personaggio utilizzando l'omonimo incanto. Si tratta del cuore di una sua vittima, all’interno del quale viene sigillata l’anima. Il cuore continuerà a pulsare e non si decomporrà fintanto che il Lich sarà vivo o la reliquia non sarà utilizzata. Il personaggio in questo modo ottiene una fonte di energia che potrà utilizzare in un secondo momento. Può essere utilizzata dal personaggio (distruggendola definitivamente) per ottenere uno dei seguenti effetti:
-\begin{itemize}
-\item Un bersaglio a contatto del Lich (o il Lich stesso) recupera 6 punti vita.
-\item Un bersaglio a contatto del Lich (o il Lich stesso) recupera 4 punti mana.
-\item Trasformata in una polvere in grado di corrompere un litro d'acqua trasformandolo in veleno letale.
-\item Catalizzatore dell’incanto “Evocazione blasfema”.
-\end{itemize}
-Ogni azione richiede un turno per essere eseguita (con l'esclusione dell'ultimo effetto, poiché inglobato nell'utilizzo dell’incanto stesso).
-Tramite ``Evocazione blasfema'' può essere evocata una di queste creature, in base al lancio di 1D6.
-
-\begin{tabularx}{\linewidth}{|c |l|}
-\hline
-\textbf{Risultato}&\textbf{Evocazione}\\ \hline
-1&Demonietto\\ \hline
-2&Grande spirito vendicativo\\ \hline
-3&Cerbero\\ \hline
-4&Succube\\ \hline
-5&Demone\\ \hline
-6&Drago zombi\\ \hline
-\end{tabularx}
-
-%stregonerie
-\clearpage
-\subsection{Le stregonerie}
-Come descritto precedentemente, le stregonerie offrono molte più possibilità al giocatore dal punto di vista della versatilità e permettono quindi maggiori spunti narrativi.
-Questo manuale prevede 5 differenti macrocategorie di stregonerie, ciascuna gestita da un'abilità differente.
-Sono: ``\emph{Attacco}'', ``\emph{Controllo}'', ``\emph{Materia}'', ``\emph{Mente}'' e ``\emph{Vita}''.\\
-
-Una stregoneria è divisa in due componenti principali:
-\begin{itemize}
-\item \emph{\textbf{Grado}} (a scelta del giocatore/personaggio): rapprenta lo sforzo del personaggio nel ricercare l'effetto desiderato. Determina quanto l'effetto della stregoneria sia imponente e conseguentemente la sua difficoltà. Il grado varia (di solito) da un minimo di 1 a un massimo di 10. La base di partenza per stabilire il grado di una stregoneria è quanto l’evento sia assurdo o quanto gravi possano essere i suoi effetti. Esempio: \emph{Utilizzare una stregoneria di alterazione per ravvivare la fiamma di un falò è molto semplice; per questo motivo la stregoneria potrebbe essere di grado 1. Manipolare le fiamme di un falò per scatenare un tornado di fuoco, è chiaramente una cosa più complessa e ha una difficoltà di molto superiore}.
-\item \emph{\textbf{Potenza}} (stabilita dal lancio di un dado): rappresenta la casualità della natura e la non completa conoscenza della magia da parte del personaggio. Il valore di potenza può avere diversi effetti, potenziando l'effetto dato dal grado o aumentando la durata della stregoneria stessa. Il tipo di dado da utilizzare è indicato nella tabella della stregoneria, ma specializzazioni, talenti o altri effetti possono cambiarlo.
-\end{itemize}
-In caso di fallimento, ogni effetto della stregoneria non si verificherà\\
-Spesso nella gittata delle stregonerie è presente la dicitura ``\emph{abilità}'': si intende il valore dell'abilità che viene utilizzata per lanciare la stregoneria.\\
-\emph{Esempio: le stregonerie di distruzione hanno una gittata pari a ``10 metri * abilità'': avendo l'abilità ``Stregoneria di attacco'' al 5, si potranno lanciare stregonerie di distruzione fino a un massimo di 50 metri di distanza.}\\
-Alcuni tipi di stregoneria richiedono la presenza di un elemento vicino al personaggio per poter essere utilizzate. Per utilizzare un dardo di fuoco tramite la Stregoneria di Distruzione, è necessario avere una fonte di fuoco (come una torcia o un falò) a disposizione.\\
-Il master potrebbe permettere a un giocatore di ignorare il lancio per stabilire la potenza, scegliendo lui stesso il risultato nella sua interezza. In questo caso però la difficoltà di lancio sarà aumentata conseguentemente (senza innalzare il grado della stregoneria).\\
-\subsubsection{Affinità con un elemento}
-Un personaggio potrebbe avere da background un particolare legame con un elemento. Il master potrebbe quindi concederegli l'\emph{affinità} a quel particolare elemento, permettendogli di ignorare il requisito dell'elemento di partenza usando stregonerie basate su di esso.\\
-Esempio: Un personaggio ha da sempre sviluppato un particolare legame con l'elemento \emph{Acqua}, cercando sempre di dare la priorità a quel particolare elemento rispetto agli altri. Il master gli concede l'\emph{affinità con l'acqua}, in modo che in qualsiasi condizione quel personaggio possa utilizzare stregonerie basate su di essa, anche se non è presente una fonte nei dintorni.
-\begin{framed}
-\textbf{\textit{Nota per i master}}\\
-Incentivate i vostri giocatori a non considerare come elementi i classici: ``Fuoco'', ``Acqua'', ``Terra'', ``Aria'', ma spronateli a optare per scelte più fantasiose (e quindi anche più divertenti). Potrebbero essere considerati come elementi a sè stanti sottoelementi dei 4 sopracitati, come Ghiaccio, Magma , Fulmine, Veleno e in generale ogni cosa coerente con l'ambientazione che sia affine con il background del personaggio.
-\end{framed}
-%stregoneria di attacco
-\clearpage
-\subsubsection{Stregoneria di Attacco}
-Queste stregonerie vengono utilizzate con l'abilità ``\textbf{Stregoneria di attacco}''.\\
-Il personaggio utilizza le sue arti magiche per infliggere danni in maniera diretta o indiretta. \\
-Questa divisione è caratterizzata dalle due specializzazioni: \emph{Distruzione} e \emph{Incantamento}.\\
-\begin{itemize}
-\item Nel primo caso egli è in grado di scatenare un qualsiasi elemento contro il suo bersaglio: potrebbe scagliare pietre aguzze mosse dalla forza della stregoneria, far emergere spine acuminate all'interno di un'armatura o persino far colpire una creatura dalla sua stessa ombra. Eventuali effetti di alterazione della materia si esauriranno immediatamente (l'armatura in esempio torna alla forma originale), ma saranno sufficienti a danneggiare i bersagli del personaggio.
-\item Nel secondo caso egli infonde la sua arma con energia magica, incrementando la capacità di infliggere ferite alle vittime dei suoi attacchi. Usando questo tipo di stregoneria è possibile attaccare con un arma immediatamente dopo il lancio.
-\end{itemize}
-La potenza di queste stregonerie migliora le capacità di infliggere danni. A seguito la tabella con i possibili risultati del dado potenza.\\
-
-\begin{tabularx}{\linewidth}{|c |X| X|}
-\hline
-\textbf{Risultato}&\textbf{Distruzione}&\textbf{Incantamento}\\ \hline
-1&Potenza = 1&Potenza = 1\\ \hline
-2&Potenza = 2&Potenza = 2\\ \hline
-3&Potenza = 3&Potenza = 3\\ \hline
-4&Potenza = 4&Potenza = 4\\ \hline
-5&Potenza = 5&Potenza = 5\\ \hline
-6&Potenza = 6; Il danno non viene ridotto dall'armatura. &Potenza = 6; Il danno del prossimo attacco non viene ridotto dall'armatura.\\ \hline
-\end{tabularx}
-
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\multicolumn{5}{|c|}{\textbf{Stregoneria di Attacco}} \\
-\hline
-\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
-\hline
-Distruzione    &   Istantaneo   &  D4   & 10 metri * abilità  & Danni: Grado + Potenza \\ \hline
-Incantamento    & Prossimo attacco (entro 5 round) &   D4  & Arma equipaggiata   & Aumento danni: Grado/2 + Potenza    \\    
-\hline
-\end{tabularx}
-
-
-%stregoneria di controllo
-\clearpage
-\subsubsection{Stregoneria di Controllo}
-Queste stregonerie vengono utilizzate con l'abilità ``\textbf{Stregoneria di controllo}''.\\
-Il personaggio utilizza le sue arti magiche per ostacolare i movimenti di un bersaglio o per \emph{annullare} il lancio di una magia. \\
-Questa divisione porta alle due specializzazioni: \emph{Blocco} e \emph{Annullamento}.\\
-\begin{itemize}
-\item Nel primo caso egli è in utilizza un qualsiasi elemento contro il suo bersaglio per rallentarne i movimenti, potendo addirittura bloccarlo del tutto. Questo potrebbe avvenire facendo emergere dal terreno radici, bloccandolo nel fango o con la forza del vento. Eventuali effetti di alterazione della materia si esauriscono al termine della stregoneria. Il grado minimo per avere effetto è pari al valore di \emph{evasione} del bersaglio. La differenza tra il grado minimo e quello a cui si sceglie di lanciare la stregoneria, viene sommata al dado potenza per determinarne gli effetti (il massimo è comunque fissato a 6). Per il bersaglio è possibile resistere a questa magia.
-\item Nel secondo caso egli utilizza la propria energia per negare il lancio di una magia lanciata entro la gittata. Il grado minimo della stregoneria di annullamento è grado pari a ``\emph{Difficoltà di lancio della magia da annullare}''. Se riesce a lanciarla con successo, la magia verrà annullata ed eventuali effetti addizionali verranno determinati dalla potenza. La differenza tra il grado minimo e quello a cui si sceglie di lanciare la stregoneria, viene sommata al dado potenza per determinarne gli effetti (il massimo è comunque fissato a 6).
-\end{itemize}
-La potenza di queste stregonerie determina quanto i movimenti siamo impossibilitati o effetti addizionati conseguenti all'annullamento della magia. \\
-
-\begin{tabularx}{\linewidth}{|c |X| X|}
-\hline
-\textbf{Risultato}&\textbf{Blocco}&\textbf{Antimagia}\\ \hline
-1& Il bersaglio ha un modificatore di +1 alla difficoltà per ogni azione. Durata 1 round. &Chi ha lanciato la magia (se è stata annullata) spende 1 punto mana addizionale.\\ \hline
-2& Il bersaglio ha un modificatore di +2 alla difficoltà per ogni azione. Durata 1 round. &Chi ha lanciato la magia (se è stata annullata) spende 1 punto mana addizionale.\\ \hline
-3&Il bersaglio ha un modificatore di +3 alla difficoltà per ogni azione. Durata 2 round.&Chi ha lanciato la magia (se è stata annullata) spende 1 punto mana addizionale.\\ \hline
-4&Il bersaglio ha un modificatore di +4 alla difficoltà per ogni azione. Durata 2 round.&Chi ha lanciato la magia (se è stata annullata) spende 2 punti mana addizionali.\\ \hline
-5&Il bersaglio è impossibilitato a compiere ogni azione. Durata 1 round.&Chi ha lanciato la magia (se è stata annullata) spende 2 punti mana addizionali.\\ \hline
-6&Il bersaglio è impossibilitato a compiere ogni azione. Durata 2 round. &Chi ha lanciato la magia (se è stata annullata) non potrà utilizzare la stessa magia per i prossimi 2 round.\\ \hline
-\end{tabularx}
-
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\multicolumn{5}{|c|}{\textbf{Stregoneria di Controllo}} \\
-\hline
-\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
-\hline
-Blocco    &   Dipende dalla potenza &  D4   & 3 metri * abilità  & Effetto in base alla potenza. \\ \hline
-Annullamento    &Istantaneo  &   D4  & 10 metri * abilità   & Annulla magia con difficoltà di lancio: Grado   \\    
-\hline
-\end{tabularx}
-
-%stregoneria di materia
-\clearpage
-\subsubsection{Stregoneria della Materia}
-Queste stregonerie vengono utilizzate con l'abilità ``\textbf{Stregoneria della materia}''.\\
-Il personaggio utilizza le sue arti magiche per alterare la materia che lo circonda o sè stesso. \\
-Questa divisione porta alle due specializzazioni: \emph{Alterazione} e \emph{Metamorfosi}.\\
-\begin{itemize}
-\item Nel primo caso egli è in cambia le proprietà di un qualsiasi elemento che lo circonda. In particolare può alterare la forma, la consistenza, lo stato o la posizione. Il personaggio è quindi in grado di ghiacciare l'acqua, modificare la pietra per costruirsi un passaggio sicuro sopra un burrone o provare a diradare la nebbia. Più l'effetto è imponente, maggiore sarà il grado della magia necessario per ottenerlo. Terminato l'effetto, la materia tornerà nelle condizioni originali, ma le conseguenze rimarranno. Per esempio, se il personaggio volesse causare un'inondazione bloccando il corso di un fiume con la magia (creando una diga grazie all'alterazione), passato il tempo la diga spariscono, ma gli effetti dell'inondazione sono comunque presenti. Una magia di alterazione non può essere concepita per infliggere danni a un bersaglio qualsiasi.
-\item Nel secondo caso egli utilizza la magia per mutare sè stesso, migliorando le proprie capacità. In particolare può ottenere un bonus tra i seguenti: \textbf{Modificatore danni inflitti in corpo a corpo, Modificatore alla difficoltà per essere colpiti, bonus a un'abilità tra ``\emph{Mani nude}'', ``\emph{Percezione}'', ``\emph{Acrobazia}'', ``\emph{Seguire tracce}''.}
-\end{itemize}
-La potenza di queste stregonerie condiziona la loro durata. A seguito la tabella con i possibili risultati del dado potenza.\\
-
-\begin{tabularx}{\linewidth}{|c |X| X|}
-\hline
-\textbf{Risultato}&\textbf{Alterazione}&\textbf{Metamorfosi}\\ \hline
-1&Durata: 5 minuti&Durata: 1 round\\ \hline
-2&Durata: 10 minuti&Durata: 1 round\\ \hline
-3&Durata: 15 minuti&Durata: 2 round\\ \hline
-4&Durata: 30 minuti&Durata: 2 round\\ \hline
-5&Durata: Un'ora&Durata: 3 round\\ \hline
-6&Durata: Un giorno&Durata: 3 round. Se prima che la stregoneria termini il personaggio utilizza nuovamente Metamorfosi, può sommare i due effetti per il tempo in cui sono sovrapposti.\\ \hline
-\end{tabularx}
-
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\multicolumn{5}{|c|}{\textbf{Stregoneria della Materia}} \\
-\hline
-\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
-\hline
-Alterazione    &   Potenza  &  D4   & 5 metri * abilità  &Alterazione della materia in base al Grado \\ \hline
-Metamorfosi    &Potenza  &   D4  & Sè stesso   & Valore: Grado / 2    \\    
-\hline
-\end{tabularx}
-
-%stregoneria della mente
-\clearpage
-\subsubsection{Stregoneria della Mente}
-Queste stregonerie vengono utilizzate con l'abilità ``\textbf{Stregoneria della mente}''.\\
-Il personaggio utilizza le sue arti magiche per costuire illusioni o manipolare le emozioni di un bersaglio. \\
-Questa divisione porta alle due specializzazioni: \emph{Illusionismo} e \emph{Condizionamento}.\\
-\begin{itemize}
-\item Nel primo caso produce un'illusione visiva, sonora o che possa essere in grado di essere recepita da un qualsiasi numero di sensi (ma non può in alcun modo infliggere danni a chi la subisce). L'illusione viene subita da tutti coloro che ne hanno la possibilità e agiranno come se fosse reale. La grandezza e il tipo di illusione condizionano il grado necessario per lanciarla, mentre la potenza influenza la durata. La difficoltà per essere riconosciuta come illusione dipende dal Grado.
-\item Nel secondo caso egli utilizza la magia per alterare le emozioni del bersaglio. Il tipo di emozione che può essere causata e tutti i comportamenti o ripercussioni che hanno sul bersaglio dipendono direttamente dal Grado. Utilizzando questa stregoneria si potrebbe suscitare paura in un bersaglio, ma l'intensità e un'eventuale fuga in preda al panico dipendono dalla stregoneria.
-\end{itemize}
-La potenza di queste stregonerie condiziona la loro durata. A seguito la tabella con i possibili risultati del dado potenza.\\
-
-\begin{tabularx}{\linewidth}{|c |X| X|}
-\hline
-\textbf{Risultato}&\textbf{Illusionismo}&\textbf{Condizionamento}\\ \hline
-1&Durata: 1 minuto&Durata: 5 minuti\\ \hline
-2&Durata: 2 minuti&Durata: 5 minuti\\ \hline
-3&Durata: 2 minuti&Durata: 10 minuti\\ \hline
-4&Durata: 5 minuti&Durata: 10 minuti\\ \hline
-5&Durata: 10 minuti&Durata: 30 minuti\\ \hline
-6&Durata: 20 minuti&Durata: Un'ora\\ \hline
-\end{tabularx}
-
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\multicolumn{5}{|c|}{\textbf{Stregoneria della Mente}} \\
-\hline
-\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
-\hline
-Illusionismo    &   Potenza  &  D4   & 3 metri * abilità  &Dimensioni o tipi di illusione in base al Grado \\ \hline
-Condizionamento   &Potenza  &   D4  & 2 metri   & Intensità dell'emozione in base al Grado \\    
-\hline
-\end{tabularx}
-
-%stregoneria della vita
-\clearpage
-\subsubsection{Stregoneria della Vita}
-Queste stregonerie vengono utilizzate con l'abilità ``\textbf{Stregoneria della vita}''.\\
-Il personaggio utilizza le sue arti magiche per curare, proteggere o evocare delle creature. \\
-Questa divisione è porta alle due specializzazioni: \emph{Guarigione} e \emph{Evocazione}.\\
-\begin{itemize}
-\item Nel primo caso può curare un bersaglio, restituendogli punti vita. A discrezione del master potrebbe essere possibile anche guarire ferite gravi e mutilazioni recenti. Alternativamente è anche possibile proteggere un alleato, fornendogli uno scudo magico in grado di assorbire i danni che subisce. In questo caso la durata è di 1 round e lo scudo applicato protegge da un ammontare di danni pari alla cura che ne sarebbe derivata. Il numero di punti vita restituiti o la quantità di scudo applicato dipende dal Grado e dalla Potenza della stregoneria. A discrezione del master, utilizzare una stregoneria di grado elevato potrebbe permettere di curare più di un bersaglio.
-\item Nel secondo caso egli utilizza la magia per evocare una creatura. L'aspetto o il metodo per evocare la creatura sono a discrezione del giocatore e del master. Le statistiche della creatura dipendono dal Grado e dalla Potenza della stregoneria, come mostrato nella tabella che segue.
-\end{itemize}
-
-\begin{tabular}{| l | l |}
-\hline
-\multicolumn{2}{|c|}{\textbf{Evocazione}}\\
-\hline
-Punti vita&Grado + Potenza + 2\\
-Abilità da combattimento complessiva (caratteristica + abilità)&Grado + 5 + Potenza\\
-Danni per attacco&Grado/2 +Potenza + 1D6\\
-Evasione&Grado/2 \\
-Armatura&Potenza\\
-Durata (in round)& Potenza\\
-\hline
-\end{tabular}\\
-
-La potenza di queste stregonerie condiziona la loro efficacia. A seguito la tabella con i possibili risultati del dado potenza.\\
-
-\begin{tabularx}{\linewidth}{|c |X| X|}
-\hline
-\textbf{Risultato}&\textbf{Guarigione}&\textbf{Evocazione}\\ \hline
-1&Potenza = 1&Potenza = 1\\ \hline
-2&Potenza = 2&Potenza = 2\\ \hline
-3&Potenza = 3&Potenza = 2\\ \hline
-4&Potenza = 4&Potenza = 3\\ \hline
-5&Potenza = 5&Potenza = 4\\ \hline
-6&Potenza = 6&Potenza = 5\\ \hline
-\end{tabularx}
-
-
-\begin{tabularx}{\linewidth}{|N| D| T| G| Y|}
-\hline
-\multicolumn{5}{|c|}{\textbf{Stregoneria della Vita}} \\
-\hline
-\textbf{Nome}    &  \textbf{Durata}   &      \textbf{Dado potenza}  &  \textbf{Gittata}  &  \textbf{Effetto}  \\    
-\hline
-Guarigione    &   Istantaneo &  D4   & 3 metri * abilità  &Valore: Grado + Potenza \\ \hline
-Evocazione   &4 round  &   D4  & 2 metri   &Evocazione con statistiche in base al Grado e Potenza \\    
-\hline
-\end{tabularx}
-
-\clearpage
-
-\subsubsection{Altri effetti delle Stregonerie}
-
-Confrontando le stregonerie e gli incanti può apparire evidente che alcuni effetti, anche molto importanti, non siano stati aggiunti tra quelli disponibili nelle stregonerie. La scelta di non includerli è stata dettata dalla difficoltà nell gestirli ai gradi più bassi. Ogni master può considerare la possibilità di permettere ai propri giocatori di sfruttare questi effetti aggiuntivi, scegliendo lui stesso le modalità d'uso. In seguito sono elencati questi effetti come esempio, segnando anche la stregoneria che potrebbe essere più adatta per ognuno di essi. Il master può anche considerare effetti non indicati in seguito, cercando di associarli alla stregoneria nel modo più sensato.
-\begin{itemize}
-\item Alterazione del tempo - Stregoneria di alterazione
-\item Lettura del pensiero - Stregoneria di condizionamento
-\item Controllo mentale - Stregoneria di condizionamento
-\item Riportare in vita un bersaglio - Stregoneria di guarigione
-\item Capacità di volare - Stregoneria di metamorfosi o di alterazione (in base a come viene fatto)
-\item Diventare invisibili - Stregoneria di metamorfosi o di alterazione (in base a come viene fatto)
-\end{itemize}
 
 \end{document}
